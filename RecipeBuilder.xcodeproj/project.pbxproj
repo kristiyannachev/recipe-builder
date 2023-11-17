@@ -14,6 +14,7 @@
 		C65DE2C42B03BCF2004DA20B /* RecipeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65DE2C32B03BCF2004DA20B /* RecipeRow.swift */; };
 		C65DE2C62B03C0B2004DA20B /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65DE2C52B03C0B2004DA20B /* Recipe.swift */; };
 		C65DE2C92B03C496004DA20B /* Recipe + SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65DE2C82B03C496004DA20B /* Recipe + SwiftUI.swift */; };
+		C65DE2CB2B04D011004DA20B /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65DE2CA2B04D010004DA20B /* RecipeDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		C65DE2C32B03BCF2004DA20B /* RecipeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRow.swift; sourceTree = "<group>"; };
 		C65DE2C52B03C0B2004DA20B /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
 		C65DE2C82B03C496004DA20B /* Recipe + SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe + SwiftUI.swift"; sourceTree = "<group>"; };
+		C65DE2CA2B04D010004DA20B /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			children = (
 				C65DE2B52B025C29004DA20B /* RecipeBuilderApp.swift */,
 				C65DE2B72B025C29004DA20B /* RecipesView.swift */,
+				C65DE2CA2B04D010004DA20B /* RecipeDetailView.swift */,
 				C65DE2B92B025C2A004DA20B /* Assets.xcassets */,
 				C65DE2BB2B025C2A004DA20B /* Preview Content */,
 				C65DE2C32B03BCF2004DA20B /* RecipeRow.swift */,
@@ -155,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C65DE2B82B025C29004DA20B /* RecipesView.swift in Sources */,
+				C65DE2CB2B04D011004DA20B /* RecipeDetailView.swift in Sources */,
 				C65DE2B62B025C29004DA20B /* RecipeBuilderApp.swift in Sources */,
 				C65DE2C42B03BCF2004DA20B /* RecipeRow.swift in Sources */,
 				C65DE2C92B03C496004DA20B /* Recipe + SwiftUI.swift in Sources */,

@@ -14,7 +14,15 @@ struct RecipesView: View {
         NavigationView {
             List {
                 ForEach(recipes) { recipe in
-                    RecipeRow(recipe: recipe)
+                    let recipeIndex = recipes.firstIndex(where: {
+                        $0.id == recipe.id
+                    })!
+                    
+                    let recipeBinding = $recipes[recipeIndex]
+                    
+                    NavigationLink(destination: RecipeDetailView (recipe: recipeBinding)) {
+                        RecipeRow(recipe: recipe)
+                    }
                 }
             }
             .navigationTitle("Recipes")
@@ -22,6 +30,7 @@ struct RecipesView: View {
     }
 }
 
+// MARK: Previews
 struct RecipesView_Previews: PreviewProvider {
     static var previews: some View {
         RecipesView(recipes: Recipe.testData)

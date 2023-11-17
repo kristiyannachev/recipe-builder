@@ -36,6 +36,7 @@ struct RecipeRow: View {
     }
 }
 
+// MARK: Previews
 struct RecipeRow_Previews: PreviewProvider {
     static var previews: some View {
         Group {
@@ -46,6 +47,5 @@ struct RecipeRow_Previews: PreviewProvider {
                 .previewLayout(.fixed(width: 400, height: 100))
                 .preferredColorScheme(.dark)
         }
-        
     }
 }

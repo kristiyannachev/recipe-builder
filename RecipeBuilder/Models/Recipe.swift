@@ -9,21 +9,201 @@ import Foundation
 
 struct Recipe: Codable {
     var recipeNumber: Int = 0
-    let title: String
-    let author: String
-    let time: String
-    let servings: String
-    let imageName: String
+    var title: String = ""
+    var author: String = ""
+    var time: String = ""
+    var servings: String = ""
+    var imageName: String = ""
+    var ingredients: [Ingredient] = []
+    var steps: [String] = []
+}
+
+struct Ingredient: Codable {
+    var content: IngredientContent = .other
+    var measurement: IngredientMeasurement = .pieces
+    var value: Int = 0
+}
+
+enum IngredientContent: String, Codable {
+    // Fruits
+    case grape = "🍇"
+    case melon = "🍈"
+    case watermelon = "🍉"
+    case tangerine = "🍊"
+    case lemon = "🍋"
+    case banana = "🍌"
+    case pineapple = "🍍"
+    case mango = "🥭"
+    case redApple = "🍎"
+    case greenApple = "🍏"
+    case pear = "🍐"
+    case peach = "🍑"
+    case cherry = "🍒"
+    case strawberry = "🍓"
+    case blueberry = "🫐"
+    case kiwi = "🥝"
+    case tomato = "🍅"
+    case olive = "🫒"
+    case coconut = "🥥"
+    
+    // Vegetables
+    case avocado = "🥑"
+    case eggplant = "🍆"
+    case potato = "🥔"
+    case carrot = "🥕"
+    case corn = "🌽"
+    case hotPepper = "🌶️"
+    case bellPepper = "🫑"
+    case cucumber = "🥒"
+    case spinach = "🥬"
+    case broccoli = "🥦"
+    case garlic = "🧄"
+    case onion = "🧅"
+    case peanuts = "🥜"
+    case mushroom = "🍄"
+    case chestnut = "🌰"
+    case sweetPotato = "🍠"
+    case pumpkin = "🎃"
+    case greenSalad = "🥗"
+    case popcorn = "🍿"
+    case cannedTomatoes = "🥫"
+    case hibiscus = "🌺"
+    case herb = "🌿"
+    case sunflowerSeeds = "🌻"
+    case flowers = "💐"
+    
+    // Base products
+    case rice = "🍚"
+    case flour = "🌾"
+    case cheese = "🧀"
+    case milk = "🥛"
+    case egg = "🥚"
+    case butter = "🧈"
+    case salt = "🧂"
+    case other = "🥘"
+    
+    // Meat
+    case ham = "🍖"
+    case poultryLeg = "🍗"
+    case steak = "🥩"
+    case bacon = "🥓"
+    case deer = "🦌"
+    case beef = "🐂"
+    case boar = "🐗"
+    case pork = "🐖"
+    case rabbit = "🐇"
+    case kangaroo = "🦘"
+    case chicken = "🐔"
+    case turkey = "🦃"
+    case duck = "🦆"
+    case frog = "🐸"
+    case snail = "🐌"
+    
+    // Fish & seafood
+    case fish = "🐟"
+    case tropicalFish = "🐠"
+    case blowfish = "🐡"
+    case shark = "🦈"
+    case octupus = "🐙"
+    case crab = "🦀"
+    case lobster = "🦞"
+    case shrimp = "🦐"
+    case squid = "🦑"
+    case oyster = "🦪"
+    case prawn = "🍤"
+
+    // Sweets
+    case iceCream = "🍨"
+    case cookie = "🍪"
+    case chocolate = "🍫"
+    case honey = "🍯"
+    case mapleSyrop = "🍁"
+
+    // Liquids
+    case water = "🚰"
+    case coffee = "☕"
+    case tea = "🫖"
+    case sake = "🍶"
+    case redWine = "🍷"
+    case beer = "🍺"
+    case champagne = "🥂"
+    case whiskey = "🥃"
+    case bubbleTea = "🧋"
+    case juice = "🧃"
+    case cactusJuice = "🌵"
+    case mate = "🧉"
+    
+    // Pastries
+    case bread = "🍞"
+    case croissant = "🥐"
+    case baguette = "🥖"
+    case flatbread = "🫓"
+    case pretzel = "🥨"
+    case bagel = "🥯"
+    case pancakes = "🥞"
+    case waffle = "🧇"
+    case noodles = "🍜"
+    case pasta = "🍝"
+    
+    var asText: String {
+         "\(self)"
+    }
+    
+    var asCapitalisedText: String {
+        "\(self)".firstUppercased
+    }
+}
+
+enum IngredientMeasurement: String, Codable {
+    case pieces = "pcs"
+    case slices = "sl"
+    case kilograms = "kg"
+    case grams = "gr"
+    case miligrams = "mg"
+    case liters = "l"
+    case mililiters = "ml"
+    case teaspoons = "tsp"
+    case tablespoons = "tbsp"
+    case cups = "cups"
 }
 
 extension Recipe {
     static var testData: [Recipe] {
         return [
-            Recipe(recipeNumber: 000001, title: "Spinach lasagne", author: "Kris", time: "45 minutes", servings: "8 servings", imageName: "spinach-lasagne"),
+            Recipe(recipeNumber: 000001,
+                   title: "Spinach lasagne",
+                   author: "Kris",
+                   time: "45 minutes",
+                   servings: "8 servings",
+                   imageName: "spinach-lasagne",
+                   ingredients: [
+                     Ingredient(content: .pasta, measurement: .grams, value: 500),
+                     Ingredient(content: .spinach, measurement: .grams, value: 500),
+                     Ingredient(content: .cheese, measurement: .kilograms, value: 1),
+                     Ingredient(content: .egg, measurement: .pieces, value: 3),
+                     Ingredient(content: .onion, measurement: .pieces, value: 1),
+                     Ingredient(content: .garlic, measurement: .slices, value: 2),
+                     Ingredient(content: .olive, measurement: .tablespoons, value: 2),
+                     Ingredient(content: .milk, measurement: .mililiters, value: 1200),
+                     Ingredient(content: .butter, measurement: .grams, value: 60),
+                     Ingredient(content: .flour, measurement: .grams, value: 60),
+                     Ingredient(content: .salt, measurement: .miligrams, value: 8)
+                   ],
+                   steps: ["For the béchamel, fry the flour until golden in the heated butter.",
+                           "Gradually, stirring constantly, pour in the milk. Cook until the sauce thickens slightly. It should remain slightly thinner than usual because the crusts are uncooked and will absorb the liquid. Turn off the heat and season with the mustard, salt and pepper.",
+                           "Saute the onion and garlic and fry them in the olive oil until soft and glassy.",
+                           "Pour boiling water over the spinach to soften. Then cool it under cold running water and drain very well, squeezing it with your hands. Chop it finely.",
+                           "Mix the spinach, grated Parmesan, crumbled gorgonzola and ricotta. Mix well. Add the fried onion and garlic, eggs, nutmeg, salt and pepper to taste and mix well again.",
+                           "Pour the bechamel on the bottom of the baking dish. Arrange the lasagne crusts on top. Pour over the béchamel, sprinkle over some of the spinach mixture and arrange the mozzarella slices. Alternate in this way until you run out of products. Finish with the crusts, béchamel and mozzarella.",
+                           "Preheat the oven to 180 degrees with a fan. Bake the lasagne for 40 minutes. Allow to cool slightly, cut and serve."]),
             Recipe(recipeNumber: 000002, title: "Pulled pork tacos", author: "Kras", time: "240 minutes", servings: "6 servings", imageName: "pulled-pork-tacos"),
             Recipe(recipeNumber: 000003, title: "Kaiserschmarrn", author: "Kros", time: "40 minutes", servings: "4 servings", imageName: "kaiserschmarrn"),
             Recipe(recipeNumber: 000004, title: "Carrot cake", author: "Krus", time: "100 minutes", servings: "12 servings", imageName: "carrot-cake"),
             Recipe(recipeNumber: 000005, title: "French onion soup", author: "Krys", time: "90 minutes", servings: "6 servings", imageName: "french-onion-soup")
         ]
     }
+}
+
+extension StringProtocol {
+    var firstUppercased: String { prefix(1).uppercased() + dropFirst() }
 }
