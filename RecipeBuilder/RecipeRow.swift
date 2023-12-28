@@ -24,8 +24,8 @@ struct RecipeRow: View {
                         .font(.headline)
                     VStack(alignment: .leading) {
                         Label(recipe.author, systemImage: "person")
-                        Label(recipe.time, systemImage: "clock")
-                        Label(recipe.servings, systemImage: "fork.knife")
+                        Label("\(recipe.time.rawValue) minutes", systemImage: "clock")
+                        Label("\(recipe.servings.rawValue) servings", systemImage: "fork.knife")
                     }
                     .foregroundColor(.accentColor)
                 }

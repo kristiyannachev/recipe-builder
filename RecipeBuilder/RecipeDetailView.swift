@@ -9,6 +9,8 @@ import SwiftUI
 
 struct RecipeDetailView: View {
     @Binding var recipe: Recipe
+    @State private var showEditView = false
+    @State private var recipeEdited = Recipe()
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: true) {
@@ -26,9 +28,9 @@ struct RecipeDetailView: View {
                 VStack(alignment: .leading) {
                     Label(recipe.author, systemImage: "person")
                     HStack() {
-                        Label(recipe.time, systemImage: "clock")
+                        Label("\(recipe.time.rawValue) minutes", systemImage: "clock")
                         Spacer()
-                        Label(recipe.servings, systemImage: "fork.knife")
+                        Label("\(recipe.servings.rawValue) servings", systemImage: "fork.knife")
                     }
                 }.foregroundColor(.accentColor)
                 
@@ -62,9 +64,28 @@ struct RecipeDetailView: View {
             .padding(.all)
             .navigationTitle(recipe.title)
             .navigationBarItems(trailing: Button(action: {
+                recipeEdited = recipe
+                showEditView = true
             }, label: {
                 Text("Edit")
             }))
+            .sheet(isPresented: $showEditView, content: {
+                NavigationView {
+                    RecipeEditView(recipe: $recipeEdited)
+                        .navigationBarItems(
+                            leading: Button(action: {
+                                showEditView = false
+                            }, label: {
+                                Text("Cancel")
+                            }),
+                            trailing: Button(action: {
+                                showEditView = false
+                                recipe = recipeEdited
+                            }, label: {
+                                Text("Done")
+                            }))
+                }
+            })
         }
     }
 }
