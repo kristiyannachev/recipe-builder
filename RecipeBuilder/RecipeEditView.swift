@@ -13,11 +13,17 @@ struct RecipeEditView: View {
     var body: some View {
         Form {
             Section(header: Text("Recipe info")) {
-                TextField("Recipe title", text: $recipe.title)
-                    .disableAutocorrection(true)
+                HStack {
+                    TextField("Recipe title", text: $recipe.title)
+                        .disableAutocorrection(true)
+                    Image(systemName: "pencil")
+                }
                 
-                TextField("Author", text: $recipe.author)
-                    .disableAutocorrection(true)
+                HStack {
+                    TextField("Author", text: $recipe.author)
+                        .disableAutocorrection(true)
+                    Image(systemName: "pencil")
+                }
 
                 Picker(selection: $recipe.time, label: Text("Time")) {
                     ForEach(Recipe.TimeValue.allCases, id: \.self) { timeValue in
@@ -51,19 +57,31 @@ struct RecipeEditView: View {
                             .frame(width: 60)
                         
                         Text(ingredient.measurement.rawValue)
+                            .frame(width: 35)
                         
                         Button(action: {
                             recipe.ingredients.remove(at: ingredientIndex)
                         }, label: {
                             Image(systemName: "minus.circle")
+                                .foregroundColor(.red)
                         })
                         .clipped()
                         .buttonStyle(BorderlessButtonStyle())
                     }
                 }
                 // For adding a new ingredient
-                NavigationLink(destination: AddIngredientView(recipe: $recipe)) {
-                    Image(systemName: "plus.circle")
+                ZStack {
+                    HStack {
+                        Spacer()
+                        Image(systemName: "plus")
+                        Spacer()
+                    }
+                    .foregroundColor(.accentColor)
+                    
+                    NavigationLink(destination: AddIngredientView(recipe: $recipe)) {
+                        Rectangle()
+                    }
+                    .opacity(0)
                 }
             }
         }.navigationTitle("Edit recipe")
