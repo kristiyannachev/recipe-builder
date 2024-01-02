@@ -86,7 +86,7 @@ struct RecipeEditView: View {
             }
             
             Section(header: Text("Steps")) {
-                ForEach(recipe.steps, id: \.self) { step in
+                List($recipe.steps, id: \.self, editActions: .all) { $step in
                     let stepIndex = recipe.steps.firstIndex(where: {$0 == step })!
                     
                     NavigationLink(destination: StepEditView(recipe: $recipe, step: step, index: stepIndex)) {
