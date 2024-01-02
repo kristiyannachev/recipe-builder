@@ -84,6 +84,30 @@ struct RecipeEditView: View {
                     .opacity(0)
                 }
             }
+            
+            Section(header: Text("Steps")) {
+                ForEach(recipe.steps, id: \.self) { step in
+                    let stepIndex = recipe.steps.firstIndex(where: {$0 == step })!
+                    
+                    NavigationLink(destination: StepEditView(recipe: $recipe, step: step, index: stepIndex)) {
+                        Text(step)
+                    }
+                }
+                // For adding a new ingredient
+                ZStack {
+                    HStack {
+                        Spacer()
+                        Image(systemName: "plus")
+                        Spacer()
+                    }
+                    .foregroundColor(.accentColor)
+                    
+                    NavigationLink(destination: StepEditView(recipe: $recipe, index: recipe.steps.count)) {
+                        Rectangle()
+                    }
+                    .opacity(0)
+                }
+            }
         }.navigationTitle("Edit recipe")
     }
 }
