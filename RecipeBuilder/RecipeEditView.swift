@@ -13,17 +13,11 @@ struct RecipeEditView: View {
     var body: some View {
         Form {
             Section(header: Text("Recipe info")) {
-                HStack {
-                    TextField("Recipe title", text: $recipe.title)
-                        .disableAutocorrection(true)
-                    Image(systemName: "pencil")
-                }
+                TextField("Recipe title", text: $recipe.title)
+                    .disableAutocorrection(true)
                 
-                HStack {
-                    TextField("Author", text: $recipe.author)
-                        .disableAutocorrection(true)
-                    Image(systemName: "pencil")
-                }
+                TextField("Author", text: $recipe.author)
+                    .disableAutocorrection(true)
 
                 Picker(selection: $recipe.time, label: Text("Time")) {
                     ForEach(Recipe.TimeValue.allCases, id: \.self) { timeValue in
