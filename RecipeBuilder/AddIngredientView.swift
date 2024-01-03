@@ -14,15 +14,15 @@ struct AddIngredientView: View {
     var body: some View {
         Form {
             Picker(selection: $ingredient.content, label: Text("Content")) {
-                ForEach(IngredientContent.allCases, id: \.self) { ingredientContent in
-                    Text("\(ingredientContent.asCapitalisedText) \(ingredientContent.rawValue)")
+                ForEach(Ingredient.IngredientContent.allCases, id: \.self) { ingredientContent in
+                    Text("\(ingredientContent.rawValue) \(ingredientContent.emoji)")
                 }
             }
             
             TextField("Value", value: $ingredient.value, format: .number)
             
             Picker(selection: $ingredient.measurement, label: Text("Measurement")) {
-                ForEach(IngredientMeasurement.allCases, id: \.self) { ingredientMeasurement in
+                ForEach(Ingredient.IngredientMeasurement.allCases, id: \.self) { ingredientMeasurement in
                     Text(ingredientMeasurement.rawValue)
                 }
             }

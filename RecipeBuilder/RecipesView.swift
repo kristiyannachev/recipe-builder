@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct RecipesView: View {
-    @State var recipes: [Recipe]
+    @Binding var recipes: [Recipe]
     
     var body: some View {
         NavigationView {
@@ -32,7 +32,18 @@ struct RecipesView: View {
 
 // MARK: Previews
 struct RecipesView_Previews: PreviewProvider {
+    @State static var testRecipes = Recipe.testData
+    
     static var previews: some View {
-        RecipesView(recipes: Recipe.testData)
+        Group {
+            NavigationView {
+                RecipesView(recipes: $testRecipes)
+            }
+            
+            NavigationView {
+                RecipesView(recipes: $testRecipes)
+                    .preferredColorScheme(.dark)
+            }
+        }
     }
 }

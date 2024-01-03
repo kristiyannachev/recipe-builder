@@ -42,7 +42,7 @@ struct RecipeEditView: View {
                     let ingredientBinding = $recipe.ingredients[ingredientIndex]
                     
                     HStack(alignment: .center, spacing: 10) {
-                        Text("\(ingredient.content.asCapitalisedText) \(ingredient.content.rawValue)")
+                        Text("\(ingredient.content.rawValue) \(ingredient.content.emoji)")
                         
                         Spacer()
                         

@@ -44,7 +44,7 @@ struct RecipeDetailView: View {
                         .sectionHeadline()
                     ForEach(recipe.ingredients, id: \.content.rawValue) { ingredient in
                         HStack {
-                            Text("\(ingredient.content.asCapitalisedText) \(ingredient.content.rawValue)  \(ingredient.value)\(ingredient.measurement.rawValue)")
+                            Text("\(ingredient.content.rawValue) \(ingredient.content.emoji)   \(ingredient.value) \(ingredient.measurement.rawValue)")
                                 .info()
                         }
                     }
