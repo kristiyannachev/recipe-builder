@@ -25,39 +25,43 @@ struct RecipeDetailView: View {
                 
                 Divider()
                 
-                VStack(alignment: .leading) {
+                VStack(alignment: .leading, spacing: 10) {
+                    Text("Recipe info")
+                        .sectionHeadline()
                     Label(recipe.author, systemImage: "person")
                     HStack() {
                         Label("\(recipe.time.rawValue) minutes", systemImage: "clock")
                         Spacer()
                         Label("\(recipe.servings.rawValue) servings", systemImage: "fork.knife")
                     }
-                }.foregroundColor(.accentColor)
+                }
+                .info()
                 
                 Divider()
                 
-                VStack(alignment: .leading) {
+                VStack(alignment: .leading, spacing: 10) {
                     Text("Ingredients")
-                        .font(.headline)
+                        .sectionHeadline()
                     ForEach(recipe.ingredients, id: \.content.rawValue) { ingredient in
                         HStack {
                             Text("\(ingredient.content.asCapitalisedText) \(ingredient.content.rawValue)  \(ingredient.value)\(ingredient.measurement.rawValue)")
+                                .info()
                         }
                     }
-                }.foregroundColor(.accentColor)
+                }
                 
                 Divider()
                 
                 VStack(alignment: .leading, spacing: 10) {
                     Text("Steps")
-                        .font(.headline)
+                        .sectionHeadline()
                     ForEach(Array(zip(recipe.steps.indices, recipe.steps)), id: \.0) { index, step in
                         Text("\(index+1). \(step)")
                             .fixedSize(horizontal: false, vertical: true)
+                            .info()
                     }
                     
                 }.foregroundColor(.accentColor)
-                
                 
                 Spacer()
             }

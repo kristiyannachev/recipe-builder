@@ -21,13 +21,13 @@ struct RecipeRow: View {
                 
                 VStack(alignment: .leading, spacing: 10) {
                     Text(recipe.title)
-                        .font(.headline)
+                        .recipeRowHeadlineNoPadding()
                     VStack(alignment: .leading) {
                         Label(recipe.author, systemImage: "person")
                         Label("\(recipe.time.rawValue) minutes", systemImage: "clock")
                         Label("\(recipe.servings.rawValue) servings", systemImage: "fork.knife")
                     }
-                    .foregroundColor(.accentColor)
+                    .info()
                 }
                 
                 Spacer()
