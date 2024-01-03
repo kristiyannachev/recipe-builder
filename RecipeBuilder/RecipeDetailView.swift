@@ -18,7 +18,7 @@ struct RecipeDetailView: View {
                 VStack(alignment: .center) {
                     Image(recipe.imageName)
                         .resizable()
-                        .frame(width: 350, height: 250)
+                        .frame(height: 300)
                         .scaledToFit()
                         .clipShape(RoundedRectangle(cornerRadius: 15))
                 }
