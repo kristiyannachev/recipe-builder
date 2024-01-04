@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct RecipeEditView: View {
+    @EnvironmentObject private var model: Model
     @Binding var recipe: Recipe
+    var isNewRecipe: Bool = false
     
     var body: some View {
         Form {
@@ -102,21 +104,24 @@ struct RecipeEditView: View {
                     .opacity(0)
                 }
             }
-        }.navigationTitle("Edit recipe")
+        }.navigationTitle("\(isNewRecipe ? "Add" : "Edit") recipe")
     }
 }
 
 struct RecipeEditView_Preview: PreviewProvider {
+    static var model = Model(recipes: Recipe.testData)
     @State static var testRecipe = Recipe.testData[0]
 
     static var previews: some View {
         Group {
             NavigationView {
                 RecipeEditView(recipe: $testRecipe)
+                    .environmentObject(model)
             }
             
             NavigationView {
                 RecipeEditView(recipe: $testRecipe)
+                    .environmentObject(model)
                     .preferredColorScheme(.dark)
             }
         }

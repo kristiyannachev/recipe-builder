@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RecipeDetailView: View {
+    @EnvironmentObject private var model: Model
     @Binding var recipe: Recipe
     @State private var showEditView = false
     @State private var recipeEdited = Recipe()
@@ -91,6 +92,7 @@ struct RecipeDetailView: View {
                 }
             })
         }
+        .environmentObject(model)
     }
 }
 

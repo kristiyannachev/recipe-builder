@@ -10,20 +10,21 @@ import SwiftUI
 @main
 struct RecipeBuilderApp: App {
     private var recipeDataManager = RecipeDataManager()
-    @State private var recipes = Recipe.testData
+    @StateObject var model = Model()
     @Environment(\.scenePhase) private var scenePhase
     
     var body: some Scene {
         WindowGroup {
-            RecipesView(recipes: self.$recipes)
+            RecipesView()
+                .environmentObject(model)
                 .onAppear(perform: {
                     recipeDataManager.load { recipes in
-                        self.recipes = recipes
+                        model.recipes = recipes
                     }
                 })
                 .onChange(of: scenePhase, perform: { phase in
                     if phase == .inactive {
-                        recipeDataManager.save(recipes: self.recipes)
+                        recipeDataManager.save(recipes: model.recipes)
                     }
                 })
         }
