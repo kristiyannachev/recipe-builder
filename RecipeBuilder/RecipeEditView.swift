@@ -11,6 +11,7 @@ struct RecipeEditView: View {
     @EnvironmentObject private var model: Model
     @Binding var recipe: Recipe
     var isNewRecipe: Bool = false
+    @State private var ingredient = Ingredient()
     
     var body: some View {
         Form {
@@ -39,7 +40,7 @@ struct RecipeEditView: View {
             Section(header: Text("Ingredients")) {
                 ForEach(recipe.ingredients) {
                     ingredient in
-                    let ingredientIndex = recipe.ingredients.firstIndex(where: {$0.content == ingredient.content })!
+                    let ingredientIndex = recipe.ingredients.firstIndex(where: {$0.ingredientNumber == ingredient.ingredientNumber })!
                     
                     let ingredientBinding = $recipe.ingredients[ingredientIndex]
                     

@@ -47,6 +47,7 @@ struct RecipesView: View {
                                 recipeAdded.recipeNumber = model.recipes.count + 1
                                 recipeAdded.imageName = "backup"
                                 model.recipes.append(recipeAdded)
+                                recipeAdded = Recipe()
                             }, label: {
                                 Text("Done")
                             }))

@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct AddIngredientView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @Binding var recipe: Recipe
-    @State var ingredient = Ingredient()
+    @State private var ingredient = Ingredient()
 
     var body: some View {
         Form {
@@ -18,6 +19,7 @@ struct AddIngredientView: View {
                     Text("\(ingredientContent.rawValue) \(ingredientContent.emoji)")
                 }
             }
+            .pickerStyle(DefaultPickerStyle())
             
             TextField("Value", value: $ingredient.value, format: .number)
             
@@ -26,11 +28,14 @@ struct AddIngredientView: View {
                     Text(ingredientMeasurement.rawValue)
                 }
             }
+            .pickerStyle(DefaultPickerStyle())
         }
         .navigationTitle("Add ingredient")
         .navigationBarItems(trailing: Button(action: {
+            ingredient.ingredientNumber = recipe.ingredients.count + 1
             recipe.ingredients.append(ingredient)
             ingredient = Ingredient()
+            presentationMode.wrappedValue.dismiss()
         }, label: {
             Text("Save")
         }))
@@ -40,6 +45,7 @@ struct AddIngredientView: View {
 // MARK: Previews
 struct AddIngredientView_Previews: PreviewProvider {
     @State static var testRecipe = Recipe.testData[0]
+    @State static var testIngredient = Recipe.testData[0].ingredients[0]
 
     static var previews: some View {
         Group {
