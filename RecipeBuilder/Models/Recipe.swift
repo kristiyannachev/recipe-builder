@@ -39,6 +39,7 @@ struct Recipe: Codable {
         case nineteen = "19"
         case twenty = "20"
     }
+    
     enum TimeValue: String, Codable, CaseIterable {
         case five = "5"
         case ten = "10"
@@ -79,7 +80,7 @@ struct Recipe: Codable {
 extension Recipe {
     static var testData: [Recipe] {
         return [
-            Recipe(recipeNumber: 000001,
+            Recipe(recipeNumber: 1,
                    title: "Spinach lasagne",
                    author: "Kris",
                    time: .fourtyFive,
@@ -92,23 +93,21 @@ extension Recipe {
                      Ingredient(content: .egg, measurement: .pieces, value: 3),
                      Ingredient(content: .onion, measurement: .pieces, value: 1),
                      Ingredient(content: .garlic, measurement: .slices, value: 2),
-                     Ingredient(content: .olive, measurement: .tablespoons, value: 2),
+                     Ingredient(content: .oliveOil, measurement: .tablespoons, value: 2),
                      Ingredient(content: .milk, measurement: .mililiters, value: 1200),
                      Ingredient(content: .butter, measurement: .grams, value: 60),
                      Ingredient(content: .flour, measurement: .grams, value: 60),
                      Ingredient(content: .salt, measurement: .miligrams, value: 8)
                    ],
-                   steps: ["For the béchamel, fry the flour until golden in the heated butter.",
-                           "Gradually, stirring constantly, pour in the milk. Cook until the sauce thickens slightly. It should remain slightly thinner than usual because the crusts are uncooked and will absorb the liquid. Turn off the heat and season with the mustard, salt and pepper.",
-                           "Saute the onion and garlic and fry them in the olive oil until soft and glassy.",
-                           "Pour boiling water over the spinach to soften. Then cool it under cold running water and drain very well, squeezing it with your hands. Chop it finely.",
-                           "Mix the spinach, grated Parmesan, crumbled gorgonzola and ricotta. Mix well. Add the fried onion and garlic, eggs, nutmeg, salt and pepper to taste and mix well again.",
-                           "Pour the bechamel on the bottom of the baking dish. Arrange the lasagne crusts on top. Pour over the béchamel, sprinkle over some of the spinach mixture and arrange the mozzarella slices. Alternate in this way until you run out of products. Finish with the crusts, béchamel and mozzarella.",
-                           "Preheat the oven to 180 degrees with a fan. Bake the lasagne for 40 minutes. Allow to cool slightly, cut and serve."]),
-            Recipe(recipeNumber: 000002, title: "Pulled pork tacos", author: "Kras", time: .twoHundredFourty, servings: .six, imageName: "pulled-pork-tacos"),
-            Recipe(recipeNumber: 000003, title: "Kaiserschmarrn", author: "Kros", time: .fourty, servings: .four, imageName: "kaiserschmarrn"),
-            Recipe(recipeNumber: 000004, title: "Carrot cake", author: "Krus", time: .hundred, servings: .twelve, imageName: "carrot-cake"),
-            Recipe(recipeNumber: 000005, title: "French onion soup", author: "Krys", time: .ninety, servings: .six, imageName: "french-onion-soup")
+                   steps: [
+                    "For the béchamel, fry the flour until golden in the heated butter.",
+                    "Gradually, stirring constantly, pour in the milk. Cook until the sauce thickens slightly. It should remain slightly thinner than usual because the crusts are uncooked and will absorb the liquid. Turn off the heat and season with the mustard, salt and pepper.",
+                    "Saute the onion and garlic and fry them in the olive oil until soft and glassy.",
+                    "Pour boiling water over the spinach to soften. Then cool it under cold running water and drain very well, squeezing it with your hands. Chop it finely.",
+                    "Mix the spinach, grated Parmesan, crumbled gorgonzola and ricotta. Mix well. Add the fried onion and garlic, eggs, nutmeg, salt and pepper to taste and mix well again.",
+                    "Pour the bechamel on the bottom of the baking dish. Arrange the lasagne crusts on top. Pour over the béchamel, sprinkle over some of the spinach mixture and arrange the mozzarella slices. Alternate in this way until you run out of products. Finish with the crusts, béchamel and mozzarella.",
+                    "Preheat the oven to 180 degrees with a fan. Bake the lasagne for 40 minutes. Allow to cool slightly, cut and serve."
+                   ])
         ]
     }
 }

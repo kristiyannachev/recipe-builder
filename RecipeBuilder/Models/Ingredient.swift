@@ -15,7 +15,7 @@ struct Ingredient: Codable, Hashable {
     
     enum IngredientContent: String, Codable, CaseIterable {
         // Fruits
-        case grape = "Grape"
+        case raisin = "Raisin"
         case melon = "Melon"
         case watermelon = "Watermelon"
         case tangerine = "Tangerine"
@@ -32,7 +32,7 @@ struct Ingredient: Codable, Hashable {
         case blueberry = "Blueberry"
         case kiwi = "Kiwi"
         case tomato = "Tomato"
-        case olive = "Olive"
+        case oliveOil = "Olive oil"
         case coconut = "Coconut"
         
         // Vegetables
@@ -50,7 +50,7 @@ struct Ingredient: Codable, Hashable {
         case onion = "Onion"
         case peanuts = "Peanuts"
         case mushroom = "Mushroom"
-        case chestnut = "Chestnut"
+        case nut = "Nut"
         case sweetPotato = "SweetPotato"
         case pumpkin = "Pumpkin"
         case greenSalad = "GreenSalad"
@@ -58,7 +58,7 @@ struct Ingredient: Codable, Hashable {
         case cannedTomatoes = "CannedTomatoes"
         case hibiscus = "Hibiscus"
         case herb = "Herb"
-        case sunflowerSeeds = "SunflowerSeeds"
+        case oil = "Oil"
         case flowers = "Flowers"
         
         // Base products
@@ -69,6 +69,7 @@ struct Ingredient: Codable, Hashable {
         case egg = "Egg"
         case butter = "Butter"
         case salt = "Salt"
+        case sugar = "Sugar"
         case other = "Other"
         
         // Meat
@@ -133,10 +134,11 @@ struct Ingredient: Codable, Hashable {
         case waffle = "Waffle"
         case noodles = "Noodles"
         case pasta = "Pasta"
+        case mustard = "Mustard"
         
         var emoji: String {
             switch self {
-            case .grape: return "🍇"
+            case .raisin: return "🍇"
             case .melon: return "🍈"
             case .watermelon: return "🍉"
             case .tangerine: return "🍊"
@@ -153,7 +155,7 @@ struct Ingredient: Codable, Hashable {
             case .blueberry: return "🫐"
             case .kiwi: return "🥝"
             case .tomato: return "🍅"
-            case .olive: return "🫒"
+            case .oliveOil: return "🫒"
             case .coconut: return "🥥"
             case .avocado: return "🥑"
             case .eggplant: return "🍆"
@@ -169,7 +171,7 @@ struct Ingredient: Codable, Hashable {
             case .onion: return "🧅"
             case .peanuts: return "🥜"
             case .mushroom: return "🍄"
-            case .chestnut: return "🌰"
+            case .nut: return "🌰"
             case .sweetPotato: return "🍠"
             case .pumpkin: return "🎃"
             case .greenSalad: return "🥗"
@@ -177,7 +179,7 @@ struct Ingredient: Codable, Hashable {
             case .cannedTomatoes: return "🥫"
             case .hibiscus: return "🌺"
             case .herb: return "🌿"
-            case .sunflowerSeeds: return "🌻"
+            case .oil: return "🌻"
             case .flowers: return "💐"
             case .rice: return "🍚"
             case .flour: return "🌾"
@@ -186,6 +188,7 @@ struct Ingredient: Codable, Hashable {
             case .egg: return "🥚"
             case .butter: return "🧈"
             case .salt: return "🧂"
+            case .sugar: return "🍬"
             case .other: return "🥘"
             case .ham: return "🍖"
             case .poultryLeg: return "🍗"
@@ -240,6 +243,7 @@ struct Ingredient: Codable, Hashable {
             case .waffle: return "🧇"
             case .noodles: return "🍜"
             case .pasta: return "🍝"
+            case .mustard: return "🌭"
             }
         }
     }
