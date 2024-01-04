@@ -14,7 +14,7 @@ struct RecipeRowHeadline: ViewModifier {
     func body(content: Content) -> some View {
         HStack {
             content
-                .font(.system(size: 20.0, weight: .bold, design: .serif))
+                .font(.system(size: 18.0, weight: .bold, design: .serif))
                 .foregroundColor(UIStyle.primary)
             Spacer()
         }.padding(.bottom, padding ? 5 : 0)
