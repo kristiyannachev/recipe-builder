@@ -1,0 +1,344 @@
+[
+    {
+        "recipeNumber": 1,
+        "title": "Spinach lasagne",
+        "author": "Kris",
+        "time": "45",
+        "servings": "8",
+        "imageName": "spinach-lasagne",
+        "ingredients": [
+            {
+                "ingredientNumber": 1,
+                "content": "Pasta",
+                "measurement": "gr",
+                "value": 500
+            },
+            {
+                "ingredientNumber": 2,
+                 "content": "Spinach",
+                 "measurement": "gr",
+                 "value": 500
+             },
+             {
+                 "ingredientNumber": 3,
+                 "content": "Cheese",
+                 "measurement": "kg",
+                 "value": 1
+             },
+             {
+                 "ingredientNumber": 4,
+                 "content": "Egg",
+                 "measurement": "pcs",
+                 "value": 3
+             },
+             {
+                 "ingredientNumber": 5,
+                 "content": "Onion",
+                 "measurement": "pcs",
+                 "value": 1
+             },
+             {
+                 "ingredientNumber": 6,
+                 "content": "Garlic",
+                 "measurement": "sl",
+                 "value": 2
+             },
+             {
+                 "ingredientNumber": 7,
+                 "content": "Olive oil",
+                 "measurement": "tbsp",
+                 "value": 2
+             },
+             {
+                 "ingredientNumber": 8,
+                 "content": "Milk",
+                 "measurement": "ml",
+                 "value": 1200
+             },
+             {
+                 "ingredientNumber": 9,
+                 "content": "Butter",
+                 "measurement": "gr",
+                 "value": 60
+             },
+             {
+                 "ingredientNumber": 10,
+                 "content": "Flour",
+                 "measurement": "gr",
+                 "value": 60
+             },
+             {
+                 "ingredientNumber": 11,
+                 "content": "Salt",
+                 "measurement": "mg",
+                 "value": 8
+             }
+        ],
+        "steps": [
+            "For the béchamel, fry the flour until golden in the heated butter.",
+            "Gradually, stirring constantly, pour in the milk. Cook until the sauce thickens slightly. It should remain slightly thinner than usual because the crusts are uncooked and will absorb the liquid. Turn off the heat and season with the mustard, salt and pepper.",
+            "Saute the onion and garlic and fry them in the olive oil until soft and glassy.",
+            "Pour boiling water over the spinach to soften. Then cool it under cold running water and drain very well, squeezing it with your hands. Chop it finely.",
+            "Mix the spinach, grated Parmesan, crumbled gorgonzola and ricotta. Mix well. Add the fried onion and garlic, eggs, nutmeg, salt and pepper to taste and mix well again.",
+            "Pour the bechamel on the bottom of the baking dish. Arrange the lasagne crusts on top. Pour over the béchamel, sprinkle over some of the spinach mixture and arrange the mozzarella slices. Alternate in this way until you run out of products. Finish with the crusts, béchamel and mozzarella.",
+            "Preheat the oven to 180 degrees with a fan. Bake the lasagne for 40 minutes. Allow to cool slightly, cut and serve."
+        ]
+    },
+    {
+        "recipeNumber": 2,
+        "title": "Chicken in bacon",
+        "author": "Kras",
+        "time": "35",
+        "servings": "3",
+        "imageName": "chicken-breast-bacon",
+        "ingredients": [
+            {
+                "ingredientNumber": 1,
+                "content": "Chicken",
+                "measurement": "gr",
+                "value": 600
+            },
+            {
+                "ingredientNumber": 2,
+                "content": "Cheese",
+                "measurement": "gr",
+                "value": 170
+            },
+            {
+                "ingredientNumber": 3,
+                "content": "Mustard",
+                "measurement": "tbsp",
+                "value": 1
+            },
+            {
+                "ingredientNumber": 4,
+                "content": "Bacon",
+                "measurement": "gr",
+                "value": 150
+            },
+            {
+                "ingredientNumber": 5,
+                "content": "Garlic",
+                "measurement": "sl",
+                "value": 1
+            },
+            {
+                "ingredientNumber": 6,
+                "content": "Salt",
+                "measurement": "mg",
+                "value": 8
+            }
+        ],
+        "steps": [
+            "The chicken fillets are split with a knife to form pockets and salted.",
+            "Mix the minced garlic with the mustard, cottage cheese, sour cream and salt to taste.",
+            "Fill the fillets with the mixture.",
+            "Wrap each piece in strips of bacon.",
+            "Bake for about 15 minutes at 220 degrees in a baking dish covered with parchment paper."
+        ]
+    },
+    {
+        "recipeNumber": 3,
+        "title": "Kaiserschmarrn",
+        "author": "Kros",
+        "time": "20",
+        "servings": "3",
+        "imageName": "kaiserschmarrn",
+        "ingredients": [
+            {
+                "ingredientNumber": 1,
+                "content": "Flour",
+                "measurement": "gr",
+                "value": 200
+            },
+            {
+                "ingredientNumber": 2,
+                "content": "Sugar",
+                "measurement": "gr",
+                "value": 30
+            },
+            {
+                "ingredientNumber": 3,
+                "content": "Salt",
+                "measurement": "gr",
+                "value": 4
+            },
+            {
+                "ingredientNumber": 4,
+                "content": "Egg",
+                "measurement": "pcs",
+                "value": 4
+            },
+            {
+                "ingredientNumber": 5,
+                "content": "Milk",
+                "measurement": "ml",
+                "value": 300
+            },
+            {
+                "ingredientNumber": 6,
+                "content": "Butter",
+                "measurement": "gr",
+                "value": 40
+            }
+        ],
+        "steps": [
+            "To make this delicious Kaiserschmarrn, first mix the flour, sugar, salt and egg yolks with the milk in a bowl to form a smooth, thick batter.",
+            "In another bowl, beat the egg whites until stiff and then fold into the thick batter.", 
+            "Foam the butter in a large, shallow pan (Ø 22-24 cm) so that it is very hot, slowly pour in the batter and fry on both sides using a spatula.",
+            "Then bake the pan in a preheated oven at a moderate heat (hot air approx. 180°C) for 10-12 minutes until the Kaiserschmarren is lightly golden brown.",
+            "Then remove the pan from the oven and tear the finished dough into irregular pieces with two spoons.",
+            "Now add the raisins, mix well and place the pan back in the oven for approx. 1 minute while still hot.",
+            "Arrange the pancakes on plates, sprinkle with sugar and serve with any compote or apple sauce."
+        ]
+    },
+    {
+        "recipeNumber": 4,
+        "title": "Carrot cake",
+        "author": "Krus",
+        "time": "90",
+        "servings": "12",
+        "imageName": "carrot-cake",
+        "ingredients": [
+            {
+                "ingredientNumber": 1,
+                "content": "Carrot",
+                "measurement": "gr",
+                "value": 500
+            },
+            {
+                "ingredientNumber": 2,
+                "content": "Flour",
+                "measurement": "gr",
+                "value": 300
+            },
+            {
+                "ingredientNumber": 3,
+                "content": "Sugar",
+                "measurement": "gr",
+                "value": 400
+            },
+            {
+                "ingredientNumber": 4,
+                "content": "Egg",
+                "measurement": "pcs",
+                "value": 3
+            },
+            {
+                "ingredientNumber": 5,
+                "content": "Nut",
+                "measurement": "gr",
+                "value": 50
+            },
+            {
+                "ingredientNumber": 6,
+                "content": "Oil",
+                "measurement": "ml",
+                "value": 100
+            },
+            {
+                "ingredientNumber": 7,
+                "content": "Salt",
+                "measurement": "gr",
+                "value": 4
+            },
+        ],
+        "steps": [
+            "Grate the carrots and mix with the crushed walnuts. Add all the remaining ingredients for the marshmallows, beating the eggs beforehand.",
+            "Stir with hands until homogeneous.",
+            "Pour it into a greased tin with baking paper and bake in a preheated oven at 170 degrees with a fan for 40-45 minutes.",
+            "When the marshmallow is ready, leave to cool and cut crosswise in half.",
+            "Beat the cream lightly with a mixer without making it fluffy. Beat the cheese with the caster sugar and mix with the cream and grated orange zest. Stir gently with a spatula.",
+            "One half of the marshmallow is placed as the base of the cake and spread with half of the cream.",
+            "Cover with the second layer and spread the remaining cream all over the cake.",
+            "Top the cake generously with walnuts. Leave to stand in the fridge for a few hours."
+        ]
+    },
+    {
+        "recipeNumber": 5,
+        "title": "Potato cream soup",
+        "author": "Krys",
+        "time": "55",
+        "servings": "8",
+        "imageName": "potato-cream-soup",
+        "ingredients": [
+            {
+                "ingredientNumber": 1,
+                "content": "Potato",
+                "measurement": "kg",
+                "value": 1
+            },
+            {
+                "ingredientNumber": 2,
+                "content": "Carrot",
+                "measurement": "pcs",
+                "value": 2
+            },
+            {
+                "ingredientNumber": 3,
+                "content": "Onion",
+                "measurement": "pcs",
+                "value": 1
+            },
+            {
+                "ingredientNumber": 4,
+                "content": "Butter",
+                "measurement": "gr",
+                "value": 50
+            },
+            {
+                "ingredientNumber": 5,
+                "content": "Milk",
+                "measurement": "ml",
+                "value": 300
+            },
+            {
+                "ingredientNumber": 6,
+                "content": "Water",
+                "measurement": "l",
+                "value": 1
+            },
+            {
+                "ingredientNumber": 7,
+                "content": "Chicken",
+                "measurement": "tsp",
+                "value": 1
+            },
+            {
+                "ingredientNumber": 8,
+                "content": "Salt",
+                "measurement": "mg",
+                "value": 8
+            },
+            {
+                "ingredientNumber": 9,
+                "content": "Bread",
+                "measurement": "sl",
+                "value": 3
+            },
+            {
+                "ingredientNumber": 10,
+                "content": "Olive oil",
+                "measurement": "tbsp",
+                "value": 2
+            },
+            {
+                "ingredientNumber": 11,
+                "content": "Herb",
+                "measurement": "tsp",
+                "value": 3
+            }
+        ],
+        "steps": [
+            "Peel the potatoes, carrot and onion. Cut the potatoes and carrots into chunks.",
+            "Put them in a saucepan and cook them in the chicken stock until tender.",
+            "When you can poke them easily with a fork, the vegetables are fairly cooked.",
+            "Remove the cooked vegetables and blend until a homogeneous mixture is obtained.",
+            "Add to the resulting mixture the butter, fresh milk and the broth in which the vegetables were cooked.",
+            "Toss well, add salt and pepper to taste and boil the potato cream soup for a few more minutes.",
+            "While the soup is boiling, prepare the croutons. Cut the bread slices into cubes and place in a suitable baking dish and sprinkle with the spices.",
+            "Pour the olive oil over them, toss well and bake for 8-10 minutes in a preheated oven at 200 degrees, basting every 2-3 minutes.",
+            "The potato cream soup is served hot with the croutons."
+        ]
+    }
+]
