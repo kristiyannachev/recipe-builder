@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Recipe: Codable {
-    var recipeNumber: Int = 0
+struct Recipe: Codable, Identifiable {
+    var id: UUID = UUID()
     var title: String = ""
     var author: String = ""
     var time: TimeValue = .five
@@ -75,13 +75,14 @@ struct Recipe: Codable {
         case twoHundredThirty = "230"
         case twoHundredFourty = "240"
     }
+    
+    private enum CodingKeys : String, CodingKey { case title, author, time, servings, imageName, ingredients, steps }
 }
 
 extension Recipe {
     static var testData: [Recipe] {
         return [
-            Recipe(recipeNumber: 1,
-                   title: "Spinach lasagne",
+            Recipe(title: "Spinach lasagne",
                    author: "Kris",
                    time: .fourtyFive,
                    servings: .eight,

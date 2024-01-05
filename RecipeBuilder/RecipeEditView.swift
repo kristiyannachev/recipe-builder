@@ -40,7 +40,7 @@ struct RecipeEditView: View {
             Section(header: Text("Ingredients")) {
                 ForEach(recipe.ingredients) {
                     ingredient in
-                    let ingredientIndex = recipe.ingredients.firstIndex(where: {$0.ingredientNumber == ingredient.ingredientNumber })!
+                    let ingredientIndex = recipe.ingredients.firstIndex(where: {$0.id == ingredient.id })!
                     
                     let ingredientBinding = $recipe.ingredients[ingredientIndex]
                     

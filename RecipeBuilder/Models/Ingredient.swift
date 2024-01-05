@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct Ingredient: Codable, Hashable {
-    var ingredientNumber: Int = 0
+struct Ingredient: Codable, Hashable, Identifiable {
+    var id: UUID = UUID()
     var content: IngredientContent = .other
     var measurement: IngredientMeasurement = .pieces
     var value: Int = 0
@@ -260,4 +260,6 @@ struct Ingredient: Codable, Hashable {
         case tablespoons = "tbsp"
         case cups = "cups"
     }
+    
+    private enum CodingKeys : String, CodingKey { case content, measurement, value }
 }

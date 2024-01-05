@@ -14,7 +14,6 @@
 		C65DE2BD2B025C2A004DA20B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C65DE2BC2B025C2A004DA20B /* Preview Assets.xcassets */; };
 		C65DE2C42B03BCF2004DA20B /* RecipeRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65DE2C32B03BCF2004DA20B /* RecipeRow.swift */; };
 		C65DE2C62B03C0B2004DA20B /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65DE2C52B03C0B2004DA20B /* Recipe.swift */; };
-		C65DE2C92B03C496004DA20B /* Recipe + SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65DE2C82B03C496004DA20B /* Recipe + SwiftUI.swift */; };
 		C65DE2CB2B04D011004DA20B /* RecipeDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C65DE2CA2B04D010004DA20B /* RecipeDetailView.swift */; };
 		C6673C372B346AAC00239A16 /* RecipeEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6673C362B346AAC00239A16 /* RecipeEditView.swift */; };
 		C6A6E87A2B3CB345005EA5C1 /* AddIngredientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A6E8792B3CB345005EA5C1 /* AddIngredientView.swift */; };
@@ -37,7 +36,6 @@
 		C65DE2BC2B025C2A004DA20B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C65DE2C32B03BCF2004DA20B /* RecipeRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRow.swift; sourceTree = "<group>"; };
 		C65DE2C52B03C0B2004DA20B /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
-		C65DE2C82B03C496004DA20B /* Recipe + SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Recipe + SwiftUI.swift"; sourceTree = "<group>"; };
 		C65DE2CA2B04D010004DA20B /* RecipeDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailView.swift; sourceTree = "<group>"; };
 		C6673C362B346AAC00239A16 /* RecipeEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeEditView.swift; sourceTree = "<group>"; };
 		C6A6E8792B3CB345005EA5C1 /* AddIngredientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddIngredientView.swift; sourceTree = "<group>"; };
@@ -109,7 +107,6 @@
 			children = (
 				C6D2C1F92B47158400B496FC /* recipes.json */,
 				C65DE2C52B03C0B2004DA20B /* Recipe.swift */,
-				C65DE2C82B03C496004DA20B /* Recipe + SwiftUI.swift */,
 				C6D2C1EF2B459AF100B496FC /* RecipeDataManager.swift */,
 				C6D2C1F32B45ABBA00B496FC /* Ingredient.swift */,
 				C6D2C1F72B46D77500B496FC /* Model.swift */,
@@ -219,7 +216,6 @@
 				C6D2C1EC2B457ACB00B496FC /* RecipeRowHeaderTextStyle.swift in Sources */,
 				C65DE2C42B03BCF2004DA20B /* RecipeRow.swift in Sources */,
 				C6D2C1E32B455ABD00B496FC /* InfoTextStyle.swift in Sources */,
-				C65DE2C92B03C496004DA20B /* Recipe + SwiftUI.swift in Sources */,
 				C65DE2C62B03C0B2004DA20B /* Recipe.swift in Sources */,
 				C60F68412B425BC20079A89C /* StepEditView.swift in Sources */,
 				C6673C372B346AAC00239A16 /* RecipeEditView.swift in Sources */,

@@ -44,7 +44,6 @@ struct RecipesView: View {
                             }),
                             trailing: Button(action: {
                                 showAddView = false
-                                recipeAdded.recipeNumber = model.recipes.count + 1
                                 recipeAdded.imageName = "backup"
                                 model.recipes.append(recipeAdded)
                                 recipeAdded = Recipe()

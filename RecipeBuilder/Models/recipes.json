@@ -1,6 +1,5 @@
 [
     {
-        "recipeNumber": 1,
         "title": "Spinach lasagne",
         "author": "Kris",
         "time": "45",
@@ -8,67 +7,56 @@
         "imageName": "spinach-lasagne",
         "ingredients": [
             {
-                "ingredientNumber": 1,
                 "content": "Pasta",
                 "measurement": "gr",
                 "value": 500
             },
             {
-                "ingredientNumber": 2,
                  "content": "Spinach",
                  "measurement": "gr",
                  "value": 500
              },
              {
-                 "ingredientNumber": 3,
                  "content": "Cheese",
                  "measurement": "kg",
                  "value": 1
              },
              {
-                 "ingredientNumber": 4,
                  "content": "Egg",
                  "measurement": "pcs",
                  "value": 3
              },
              {
-                 "ingredientNumber": 5,
                  "content": "Onion",
                  "measurement": "pcs",
                  "value": 1
              },
              {
-                 "ingredientNumber": 6,
                  "content": "Garlic",
                  "measurement": "sl",
                  "value": 2
              },
              {
-                 "ingredientNumber": 7,
                  "content": "Olive oil",
                  "measurement": "tbsp",
                  "value": 2
              },
              {
-                 "ingredientNumber": 8,
                  "content": "Milk",
                  "measurement": "ml",
                  "value": 1200
              },
              {
-                 "ingredientNumber": 9,
                  "content": "Butter",
                  "measurement": "gr",
                  "value": 60
              },
              {
-                 "ingredientNumber": 10,
                  "content": "Flour",
                  "measurement": "gr",
                  "value": 60
              },
              {
-                 "ingredientNumber": 11,
                  "content": "Salt",
                  "measurement": "mg",
                  "value": 8
@@ -85,7 +73,6 @@
         ]
     },
     {
-        "recipeNumber": 2,
         "title": "Chicken in bacon",
         "author": "Kras",
         "time": "35",
@@ -93,37 +80,31 @@
         "imageName": "chicken-breast-bacon",
         "ingredients": [
             {
-                "ingredientNumber": 1,
                 "content": "Chicken",
                 "measurement": "gr",
                 "value": 600
             },
             {
-                "ingredientNumber": 2,
                 "content": "Cheese",
                 "measurement": "gr",
                 "value": 170
             },
             {
-                "ingredientNumber": 3,
                 "content": "Mustard",
                 "measurement": "tbsp",
                 "value": 1
             },
             {
-                "ingredientNumber": 4,
                 "content": "Bacon",
                 "measurement": "gr",
                 "value": 150
             },
             {
-                "ingredientNumber": 5,
                 "content": "Garlic",
                 "measurement": "sl",
                 "value": 1
             },
             {
-                "ingredientNumber": 6,
                 "content": "Salt",
                 "measurement": "mg",
                 "value": 8
@@ -138,7 +119,6 @@
         ]
     },
     {
-        "recipeNumber": 3,
         "title": "Kaiserschmarrn",
         "author": "Kros",
         "time": "20",
@@ -146,37 +126,31 @@
         "imageName": "kaiserschmarrn",
         "ingredients": [
             {
-                "ingredientNumber": 1,
                 "content": "Flour",
                 "measurement": "gr",
                 "value": 200
             },
             {
-                "ingredientNumber": 2,
                 "content": "Sugar",
                 "measurement": "gr",
                 "value": 30
             },
             {
-                "ingredientNumber": 3,
                 "content": "Salt",
                 "measurement": "gr",
                 "value": 4
             },
             {
-                "ingredientNumber": 4,
                 "content": "Egg",
                 "measurement": "pcs",
                 "value": 4
             },
             {
-                "ingredientNumber": 5,
                 "content": "Milk",
                 "measurement": "ml",
                 "value": 300
             },
             {
-                "ingredientNumber": 6,
                 "content": "Butter",
                 "measurement": "gr",
                 "value": 40
@@ -184,7 +158,7 @@
         ],
         "steps": [
             "To make this delicious Kaiserschmarrn, first mix the flour, sugar, salt and egg yolks with the milk in a bowl to form a smooth, thick batter.",
-            "In another bowl, beat the egg whites until stiff and then fold into the thick batter.", 
+            "In another bowl, beat the egg whites until stiff and then fold into the thick batter.",
             "Foam the butter in a large, shallow pan (Ø 22-24 cm) so that it is very hot, slowly pour in the batter and fry on both sides using a spatula.",
             "Then bake the pan in a preheated oven at a moderate heat (hot air approx. 180°C) for 10-12 minutes until the Kaiserschmarren is lightly golden brown.",
             "Then remove the pan from the oven and tear the finished dough into irregular pieces with two spoons.",
@@ -193,7 +167,6 @@
         ]
     },
     {
-        "recipeNumber": 4,
         "title": "Carrot cake",
         "author": "Krus",
         "time": "90",
@@ -201,43 +174,36 @@
         "imageName": "carrot-cake",
         "ingredients": [
             {
-                "ingredientNumber": 1,
                 "content": "Carrot",
                 "measurement": "gr",
                 "value": 500
             },
             {
-                "ingredientNumber": 2,
                 "content": "Flour",
                 "measurement": "gr",
                 "value": 300
             },
             {
-                "ingredientNumber": 3,
                 "content": "Sugar",
                 "measurement": "gr",
                 "value": 400
             },
             {
-                "ingredientNumber": 4,
                 "content": "Egg",
                 "measurement": "pcs",
                 "value": 3
             },
             {
-                "ingredientNumber": 5,
                 "content": "Nut",
                 "measurement": "gr",
                 "value": 50
             },
             {
-                "ingredientNumber": 6,
                 "content": "Oil",
                 "measurement": "ml",
                 "value": 100
             },
             {
-                "ingredientNumber": 7,
                 "content": "Salt",
                 "measurement": "gr",
                 "value": 4
@@ -255,7 +221,6 @@
         ]
     },
     {
-        "recipeNumber": 5,
         "title": "Potato cream soup",
         "author": "Krys",
         "time": "55",
@@ -263,67 +228,56 @@
         "imageName": "potato-cream-soup",
         "ingredients": [
             {
-                "ingredientNumber": 1,
                 "content": "Potato",
                 "measurement": "kg",
                 "value": 1
             },
             {
-                "ingredientNumber": 2,
                 "content": "Carrot",
                 "measurement": "pcs",
                 "value": 2
             },
             {
-                "ingredientNumber": 3,
                 "content": "Onion",
                 "measurement": "pcs",
                 "value": 1
             },
             {
-                "ingredientNumber": 4,
                 "content": "Butter",
                 "measurement": "gr",
                 "value": 50
             },
             {
-                "ingredientNumber": 5,
                 "content": "Milk",
                 "measurement": "ml",
                 "value": 300
             },
             {
-                "ingredientNumber": 6,
                 "content": "Water",
                 "measurement": "l",
                 "value": 1
             },
             {
-                "ingredientNumber": 7,
                 "content": "Chicken",
                 "measurement": "tsp",
                 "value": 1
             },
             {
-                "ingredientNumber": 8,
                 "content": "Salt",
                 "measurement": "mg",
                 "value": 8
             },
             {
-                "ingredientNumber": 9,
                 "content": "Bread",
                 "measurement": "sl",
                 "value": 3
             },
             {
-                "ingredientNumber": 10,
                 "content": "Olive oil",
                 "measurement": "tbsp",
                 "value": 2
             },
             {
-                "ingredientNumber": 11,
                 "content": "Herb",
                 "measurement": "tsp",
                 "value": 3

@@ -32,7 +32,6 @@ struct AddIngredientView: View {
         }
         .navigationTitle("Add ingredient")
         .navigationBarItems(trailing: Button(action: {
-            ingredient.ingredientNumber = recipe.ingredients.count + 1
             recipe.ingredients.append(ingredient)
             ingredient = Ingredient()
             presentationMode.wrappedValue.dismiss()
