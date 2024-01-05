@@ -10,12 +10,13 @@ import SwiftUI
 // MARK: SectionHeadline
 struct RecipeRowHeadline: ViewModifier {
     var padding = true
+    var isDark: Bool
     
     func body(content: Content) -> some View {
         HStack {
             content
                 .font(.system(size: 18.0, weight: .bold, design: .serif))
-                .foregroundColor(UIStyle.primary)
+                .foregroundColor(isDark ? UIStyle.primaryDarkMode : UIStyle.primaryLightMode)
             Spacer()
         }.padding(.bottom, padding ? 5 : 0)
     }
@@ -23,14 +24,14 @@ struct RecipeRowHeadline: ViewModifier {
 
 // MARK: View + sectionHeadline
 extension View {
-    func recipeRowHeadline() -> some View {
-        modifier(RecipeRowHeadline())
+    func recipeRowHeadline(isDark: Bool) -> some View {
+        modifier(RecipeRowHeadline(isDark: isDark))
     }
 }
 
 // MARK: View + sectionHeadlineNoPadding
 extension View {
-    func recipeRowHeadlineNoPadding() -> some View {
-        modifier(RecipeRowHeadline(padding: false))
+    func recipeRowHeadlineNoPadding(isDark: Bool) -> some View {
+        modifier(RecipeRowHeadline(padding: false, isDark: isDark))
     }
 }

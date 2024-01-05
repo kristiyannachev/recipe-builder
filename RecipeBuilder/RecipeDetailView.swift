@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct RecipeDetailView: View {
+    @Environment(\.colorScheme) var colorScheme
     @EnvironmentObject private var model: Model
     @Binding var recipe: Recipe
     @State private var showEditView = false
@@ -28,7 +29,7 @@ struct RecipeDetailView: View {
                 
                 VStack(alignment: .leading, spacing: 10) {
                     Text("Recipe info")
-                        .sectionHeadline()
+                        .sectionHeadline(isDark: colorScheme == .dark)
                     Label(recipe.author, systemImage: "person")
                     HStack() {
                         Label("\(recipe.time.rawValue) minutes", systemImage: "clock")
@@ -36,17 +37,17 @@ struct RecipeDetailView: View {
                         Label("\(recipe.servings.rawValue) servings", systemImage: "fork.knife")
                     }
                 }
-                .info()
+                .info(isDark: colorScheme == .dark)
                 
                 Divider()
                 
                 VStack(alignment: .leading, spacing: 10) {
                     Text("Ingredients")
-                        .sectionHeadline()
+                        .sectionHeadline(isDark: colorScheme == .dark)
                     ForEach(recipe.ingredients) { ingredient in
                         HStack {
                             Text("\(ingredient.content.rawValue) \(ingredient.content.emoji)   \(ingredient.value) \(ingredient.measurement.rawValue)")
-                                .info()
+                                .info(isDark: colorScheme == .dark)
                         }
                     }
                 }
@@ -55,11 +56,11 @@ struct RecipeDetailView: View {
                 
                 VStack(alignment: .leading, spacing: 10) {
                     Text("Steps")
-                        .sectionHeadline()
+                        .sectionHeadline(isDark: colorScheme == .dark)
                     ForEach(Array(zip(recipe.steps.indices, recipe.steps)), id: \.0) { index, step in
                         Text("\(index+1). \(step)")
                             .fixedSize(horizontal: false, vertical: true)
-                            .info()
+                            .info(isDark: colorScheme == .dark)
                     }
                     
                 }.foregroundColor(.accentColor)

@@ -25,6 +25,7 @@
 		C6D2C1F42B45ABBA00B496FC /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D2C1F32B45ABBA00B496FC /* Ingredient.swift */; };
 		C6D2C1F82B46D77500B496FC /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D2C1F72B46D77500B496FC /* Model.swift */; };
 		C6D2C1FA2B47158500B496FC /* recipes.json in Resources */ = {isa = PBXBuildFile; fileRef = C6D2C1F92B47158400B496FC /* recipes.json */; };
+		C6D2C1FC2B48258700B496FC /* RecipeRowInfoTextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D2C1FB2B48258700B496FC /* RecipeRowInfoTextStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		C6D2C1F32B45ABBA00B496FC /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
 		C6D2C1F72B46D77500B496FC /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		C6D2C1F92B47158400B496FC /* recipes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = recipes.json; sourceTree = "<group>"; };
+		C6D2C1FB2B48258700B496FC /* RecipeRowInfoTextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRowInfoTextStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				C6D2C1E22B455ABC00B496FC /* InfoTextStyle.swift */,
 				C6D2C1E72B4563A200B496FC /* SectionHeadlineTextStyle.swift */,
 				C6D2C1EB2B457ACB00B496FC /* RecipeRowHeaderTextStyle.swift */,
+				C6D2C1FB2B48258700B496FC /* RecipeRowInfoTextStyle.swift */,
 			);
 			path = Text;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				C65DE2B62B025C29004DA20B /* RecipeBuilderApp.swift in Sources */,
 				C6D2C1F82B46D77500B496FC /* Model.swift in Sources */,
 				C6D2C1EA2B45663D00B496FC /* UIStyle.swift in Sources */,
+				C6D2C1FC2B48258700B496FC /* RecipeRowInfoTextStyle.swift in Sources */,
 				C6D2C1EC2B457ACB00B496FC /* RecipeRowHeaderTextStyle.swift in Sources */,
 				C65DE2C42B03BCF2004DA20B /* RecipeRow.swift in Sources */,
 				C6D2C1E32B455ABD00B496FC /* InfoTextStyle.swift in Sources */,
