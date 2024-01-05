@@ -12,6 +12,9 @@ struct RecipesView: View {
     @State private var showAddView = false
     @State private var recipeAdded = Recipe()
     
+    init(_ model: Model) {
+    }
+    
     var body: some View {
         NavigationView {
             List {
@@ -64,13 +67,11 @@ struct RecipesView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
             NavigationView {
-                RecipesView()
-                    .environmentObject(model)
+                RecipesView(model)
             }
             
             NavigationView {
-                RecipesView()
-                    .environmentObject(model)
+                RecipesView(model)
                     .preferredColorScheme(.dark)
             }
         }

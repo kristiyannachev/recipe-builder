@@ -15,7 +15,7 @@ struct RecipeBuilderApp: App {
     
     var body: some Scene {
         WindowGroup {
-            RecipesView()
+            MainView()
                 .environmentObject(model)
                 .onAppear(perform: {
                     recipeDataManager.load { recipes in

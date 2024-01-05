@@ -1,5 +1,5 @@
 //
-//  AddIngredientView.swift
+//  IngredientAddView.swift
 //  RecipeBuilder
 //
 //  Created by Kristiyan Nachev on 27.12.23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AddIngredientView: View {
+struct IngredientAddView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @Binding var recipe: Recipe
     @State private var ingredient = Ingredient()
@@ -48,9 +48,9 @@ struct AddIngredientView_Previews: PreviewProvider {
 
     static var previews: some View {
         Group {
-            AddIngredientView(recipe: $testRecipe)
+            IngredientAddView(recipe: $testRecipe)
             
-            AddIngredientView(recipe: $testRecipe)
+            IngredientAddView(recipe: $testRecipe)
                 .preferredColorScheme(.dark)
         }
     }

@@ -75,7 +75,7 @@ struct RecipeEditView: View {
                     }
                     .foregroundColor(.accentColor)
                     
-                    NavigationLink(destination: AddIngredientView(recipe: $recipe)) {
+                    NavigationLink(destination: IngredientAddView(recipe: $recipe)) {
                         Rectangle()
                     }
                     .opacity(0)
