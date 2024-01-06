@@ -35,7 +35,7 @@ struct StepEditView: View {
 }
 
 struct StepEditView_Preview: PreviewProvider {
-    @State static var testRecipe = Recipe.testData[0]
+    @State static var testRecipe = MockModel().recipes[0]
 
     static var previews: some View {
         Group {

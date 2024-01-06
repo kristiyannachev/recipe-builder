@@ -110,8 +110,8 @@ struct RecipeEditView: View {
 }
 
 struct RecipeEditView_Preview: PreviewProvider {
-    static var model = Model(recipes: Recipe.testData)
-    @State static var testRecipe = Recipe.testData[0]
+    static var model = MockModel()
+    @State static var testRecipe = MockModel().recipes[0]
 
     static var previews: some View {
         Group {

@@ -10,11 +10,7 @@ import Foundation
 class Model: ObservableObject {
     @Published var recipes: [Recipe] = []
     
-    init() {
-        self.recipes = []
-    }
-    
-    init(recipes: [Recipe]) {
+    init(recipes: [Recipe] = []) {
         self.recipes = recipes
     }
 }

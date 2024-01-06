@@ -43,8 +43,7 @@ struct IngredientAddView: View {
 
 // MARK: Previews
 struct AddIngredientView_Previews: PreviewProvider {
-    @State static var testRecipe = Recipe.testData[0]
-    @State static var testIngredient = Recipe.testData[0].ingredients[0]
+    @State static var testRecipe = MockModel().recipes[0]
 
     static var previews: some View {
         Group {

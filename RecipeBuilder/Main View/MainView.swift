@@ -17,7 +17,7 @@ struct MainView: View {
 
 // MARK: Previews
 struct MainView_Previews: PreviewProvider {
-    static var model = Model(recipes: Recipe.testData)
+    static var model = MockModel()
     
     static var previews: some View {
         Group {

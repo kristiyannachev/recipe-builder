@@ -40,12 +40,14 @@ struct RecipeRow: View {
 
 // MARK: Previews
 struct RecipeRow_Previews: PreviewProvider {
+    static var model = MockModel()
+    
     static var previews: some View {
         Group {
-            RecipeRow(recipe: Recipe.testData[0])
+            RecipeRow(recipe: model.recipes[0])
                 .previewLayout(.fixed(width: 400, height: 100))
             
-            RecipeRow(recipe: Recipe.testData[0])
+            RecipeRow(recipe: model.recipes[0])
                 .previewLayout(.fixed(width: 400, height: 100))
                 .preferredColorScheme(.dark)
         }
