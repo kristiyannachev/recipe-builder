@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct StepEditView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @Binding var recipe: Recipe
     @State var step: String = ""
     var index = 0
@@ -28,6 +29,7 @@ struct StepEditView: View {
                 recipe.steps[index] = step
             }
             step = ""
+            presentationMode.wrappedValue.dismiss()
         }, label: {
             Text("Save")
         }))
