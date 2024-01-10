@@ -9,34 +9,36 @@ import SwiftUI
 
 struct IngredientAddView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @Binding var recipe: Recipe
-    @State private var ingredient = Ingredient()
+    @ObservedObject var viewModel: IngredientAddViewModel
 
+    init(recipe: Binding<Recipe>) {
+        viewModel = IngredientAddViewModel(recipe: recipe)
+    }
+    
     var body: some View {
         Form {
-            Picker(selection: $ingredient.content, label: Text("Content")) {
+            Picker(selection: $viewModel.ingredient.content, label: Text(viewModel.contentTextFieldText)) {
                 ForEach(Ingredient.IngredientContent.allCases, id: \.self) { ingredientContent in
-                    Text("\(ingredientContent.rawValue) \(ingredientContent.emoji)")
+                    Text(viewModel.getIngredientContentText(ingredientContent))
                 }
             }
             .pickerStyle(DefaultPickerStyle())
             
-            TextField("Value", value: $ingredient.value, format: .number)
+            TextField(viewModel.valueTextFieldText, value: $viewModel.ingredient.value, format: .number)
             
-            Picker(selection: $ingredient.measurement, label: Text("Measurement")) {
+            Picker(selection: $viewModel.ingredient.measurement, label: Text(viewModel.measurementPickerText)) {
                 ForEach(Ingredient.IngredientMeasurement.allCases, id: \.self) { ingredientMeasurement in
-                    Text(ingredientMeasurement.rawValue)
+                    Text(viewModel.getIngredientMeasurementText(ingredientMeasurement))
                 }
             }
             .pickerStyle(DefaultPickerStyle())
         }
-        .navigationTitle("Add ingredient")
+        .navigationTitle(viewModel.navigationTitle)
         .navigationBarItems(trailing: Button(action: {
-            recipe.ingredients.append(ingredient)
-            ingredient = Ingredient()
+            viewModel.saveIngredient()
             presentationMode.wrappedValue.dismiss()
         }, label: {
-            Text("Save")
+            Text(viewModel.saveIngredientText)
         }))
     }
 }

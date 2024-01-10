@@ -9,29 +9,23 @@ import SwiftUI
 
 struct StepEditView: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    @Binding var recipe: Recipe
-    @State var step: String = ""
-    var index = 0
-    private var isNewStep: Bool {
-        index == recipe.steps.count
+    @ObservedObject var viewModel: StepEditViewModel
+    
+    init(recipe: Binding<Recipe>, step: String = "", index: Int = 0) {
+        viewModel = StepEditViewModel(recipe: recipe, step: step, index: index)
     }
 
     var body: some View {
         Form {
-            TextField("Enter step here", text: $step,  axis: .vertical)
+            TextField(viewModel.stepTextFieldText, text: $viewModel.step,  axis: .vertical)
                 .lineLimit(1...20)
         }
-        .navigationTitle("\(isNewStep ? "Add" : "Edit") step")
+        .navigationTitle(viewModel.navigationTitle)
         .navigationBarItems(trailing: Button(action: {
-            if isNewStep {
-                recipe.steps.append(step)
-            } else {
-                recipe.steps[index] = step
-            }
-            step = ""
+            viewModel.saveStep()
             presentationMode.wrappedValue.dismiss()
         }, label: {
-            Text("Save")
+            Text(viewModel.saveStepText)
         }))
     }
 }
