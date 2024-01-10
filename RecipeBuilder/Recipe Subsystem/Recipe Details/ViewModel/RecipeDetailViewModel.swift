@@ -74,8 +74,4 @@ class RecipeDetailViewModel: ObservableObject {
         recipe = recipeEdited
         model.saveRecipe(recipe: recipe)
     }
-    
-//    func getRecipeEditView() -> some View {
-//        RecipeEditView(model, recipe: recipeEdited, isNewRecipe: false)
-//    }
 }

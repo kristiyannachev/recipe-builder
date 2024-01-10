@@ -44,8 +44,4 @@ class RecipesViewModel: ObservableObject {
     func getRecipeDetailView(recipe: Recipe) -> some View {
         RecipeDetailView(model, recipe: recipe)
     }
-    
-//    func getRecipeAddView() -> some View {
-//        RecipeEditView(model, recipe: recipeAdded, isNewRecipe: true)
-//    }
 }

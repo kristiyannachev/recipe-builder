@@ -76,8 +76,8 @@ struct RecipeDetailView: View {
                 Text(viewModel.showEditRecipeText)
             }))
             .sheet(isPresented: $viewModel.showEditView, content: {
-                NavigationView {                    RecipeEditView(recipe: $viewModel.recipeEdited)
-//                    viewModel.getRecipeEditView()
+                NavigationView {
+                    RecipeEditView(recipe: $viewModel.recipeEdited, isNewRecipe: false)
                         .navigationBarItems(
                             leading: Button(action: {
                                 viewModel.cancelSaveRecipe()

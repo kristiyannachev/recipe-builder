@@ -8,58 +8,59 @@
 import SwiftUI
 
 struct RecipeEditView: View {
-    @EnvironmentObject private var model: Model
-    @Binding var recipe: Recipe
-    var isNewRecipe: Bool = false
-    @State private var ingredient = Ingredient()
+    @ObservedObject var viewModel: RecipeEditViewModel
+    
+    init(recipe: Binding<Recipe>, isNewRecipe: Bool) {
+        viewModel = RecipeEditViewModel(recipe: recipe, isNewRecipe: isNewRecipe)
+    }
     
     var body: some View {
         Form {
-            Section(header: Text("Recipe info")) {
-                TextField("Recipe title", text: $recipe.title)
+            Section(header: Text(viewModel.recipeInfoSectionText)) {
+                TextField(viewModel.recipeTitleTextFieldText, text: $viewModel.recipe.title)
                     .disableAutocorrection(true)
                 
-                TextField("Author", text: $recipe.author)
+                TextField(viewModel.authorTextFieldText, text: $viewModel.recipe.author)
                     .disableAutocorrection(true)
 
-                Picker(selection: $recipe.time, label: Text("Time")) {
+                Picker(selection: $viewModel.recipe.time, label: Text(viewModel.timeText)) {
                     ForEach(Recipe.TimeValue.allCases, id: \.self) { timeValue in
-                        Text(timeValue.rawValue)
+                        Text(viewModel.getTimeValueText(timeValue))
                     }
                 }
                 .pickerStyle(DefaultPickerStyle())
 
-                Picker(selection: $recipe.servings, label: Text("Servings")) {
+                Picker(selection: $viewModel.recipe.servings, label: Text(viewModel.servingsText)) {
                     ForEach(Recipe.ServingsValue.allCases, id: \.self) { servings in
-                        Text(servings.rawValue)
+                        Text(viewModel.getServingsValueText(servings))
                     }
                 }
                 .pickerStyle(DefaultPickerStyle())
             }
             
-            Section(header: Text("Ingredients")) {
-                ForEach(recipe.ingredients) {
+            Section(header: Text(viewModel.ingredientsSectionText)) {
+                ForEach(viewModel.recipe.ingredients) {
                     ingredient in
-                    let ingredientIndex = recipe.ingredients.firstIndex(where: {$0.id == ingredient.id })!
+                    let ingredientIndex = viewModel.getIngredientIndex(ingredient)
+                    let ingredientBinding = viewModel.getIngredientForBinding(index: ingredientIndex)
                     
-                    let ingredientBinding = $recipe.ingredients[ingredientIndex]
-                    
-                    HStack(alignment: .center, spacing: 10) {
-                        Text("\(ingredient.content.rawValue) \(ingredient.content.emoji)")
+                    HStack(alignment: .center, spacing: viewModel.spacing) {
+                        Text(viewModel.getIngredientContentText(ingredient))
                         
                         Spacer()
                         
-                        TextField("Value", value: ingredientBinding.value, format: .number)
+                        TextField(viewModel.ingredientValueTextFieldText, value: ingredientBinding.value, format: .number)
+                            .keyboardType(.numberPad)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
-                            .frame(width: 60)
+                            .frame(width: viewModel.ingredientValueTextFieldTextWidth)
                         
-                        Text(ingredient.measurement.rawValue)
-                            .frame(width: 35)
+                        Text(viewModel.getIngredientMeasurementText(ingredient))
+                            .frame(width: viewModel.ingredientMeasurementWidth)
                         
                         Button(action: {
-                            recipe.ingredients.remove(at: ingredientIndex)
+                            viewModel.removeIngredient(ingredient)
                         }, label: {
-                            Image(systemName: "minus.circle")
+                            Image(systemName: viewModel.removeIngredientImageName)
                                 .foregroundColor(.red)
                         })
                         .clipped()
@@ -70,23 +71,23 @@ struct RecipeEditView: View {
                 ZStack {
                     HStack {
                         Spacer()
-                        Image(systemName: "plus")
+                        Image(systemName: viewModel.addImageName)
                         Spacer()
                     }
                     .foregroundColor(.accentColor)
                     
-                    NavigationLink(destination: IngredientAddView(recipe: $recipe)) {
+                    NavigationLink(destination: IngredientAddView(recipe: $viewModel.recipe)) {
                         Rectangle()
                     }
                     .opacity(0)
                 }
             }
             
-            Section(header: Text("Steps")) {
-                List($recipe.steps, id: \.self, editActions: .all) { $step in
-                    let stepIndex = recipe.steps.firstIndex(where: {$0 == step })!
+            Section(header: Text(viewModel.stepsSectionText)) {
+                List($viewModel.recipe.steps, id: \.self, editActions: .all) { $step in
+                    let stepIndex = viewModel.recipe.steps.firstIndex(where: {$0 == step })!
                     
-                    NavigationLink(destination: StepEditView(recipe: $recipe, step: step, index: stepIndex)) {
+                    NavigationLink(destination: StepEditView(recipe: $viewModel.recipe, step: step, index: stepIndex)) {
                         Text(step)
                     }
                 }
@@ -94,37 +95,35 @@ struct RecipeEditView: View {
                 ZStack {
                     HStack {
                         Spacer()
-                        Image(systemName: "plus")
+                        Image(systemName: viewModel.addImageName)
                         Spacer()
                     }
                     .foregroundColor(.accentColor)
                     
-                    NavigationLink(destination: StepEditView(recipe: $recipe, index: recipe.steps.count)) {
+                    NavigationLink(destination: StepEditView(recipe: $viewModel.recipe, index: viewModel.recipe.steps.count)) {
                         Rectangle()
                     }
                     .opacity(0)
                 }
             }
-        }.navigationTitle("\(isNewRecipe ? "Add" : "Edit") recipe")
+        }.navigationTitle(viewModel.navigationTitle)
     }
 }
 
 struct RecipeEditView_Preview: PreviewProvider {
-    static var model = MockModel()
     @State static var testRecipe = MockModel().recipes[0]
 
     static var previews: some View {
         Group {
             NavigationView {
-                RecipeEditView(recipe: $testRecipe)
-                    .environmentObject(model)
+                RecipeEditView(recipe: $testRecipe, isNewRecipe: false)
             }
             
             NavigationView {
-                RecipeEditView(recipe: $testRecipe)
-                    .environmentObject(model)
+                RecipeEditView(recipe: $testRecipe, isNewRecipe: false)
                     .preferredColorScheme(.dark)
             }
         }
     }
+
 }

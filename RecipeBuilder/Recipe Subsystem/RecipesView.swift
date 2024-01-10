@@ -32,7 +32,6 @@ struct RecipesView: View {
             .sheet(isPresented: $viewModel.showAddView, content: {
                 NavigationView {
                     RecipeEditView(recipe: $viewModel.recipeAdded, isNewRecipe: true)
-//                    viewModel.getRecipeAddView()
                         .navigationBarItems(
                             leading: Button(action: {
                                 viewModel.cancelAddRecipe()
