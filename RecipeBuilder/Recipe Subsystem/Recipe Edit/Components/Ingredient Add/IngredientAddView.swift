@@ -25,6 +25,7 @@ struct IngredientAddView: View {
             .pickerStyle(DefaultPickerStyle())
             
             TextField(viewModel.valueTextFieldText, value: $viewModel.ingredient.value, format: .number)
+                .keyboardType(.numberPad)
             
             Picker(selection: $viewModel.ingredient.measurement, label: Text(viewModel.measurementPickerText)) {
                 ForEach(Ingredient.IngredientMeasurement.allCases, id: \.self) { ingredientMeasurement in
