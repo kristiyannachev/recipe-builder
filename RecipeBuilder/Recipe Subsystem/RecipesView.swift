@@ -8,55 +8,45 @@
 import SwiftUI
 
 struct RecipesView: View {
-    @EnvironmentObject private var model: Model
-    @State private var showAddView = false
-    @State private var recipeAdded = Recipe()
+    @ObservedObject var viewModel: RecipesViewModel
     
     init(_ model: Model) {
+        viewModel = RecipesViewModel(model)
     }
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(model.recipes) { recipe in
-                    let recipeIndex = model.recipes.firstIndex(where: {
-                        $0.id == recipe.id
-                    })!
-                    
-                    let recipeBinding = $model.recipes[recipeIndex]
-                    
-                    NavigationLink(destination: RecipeDetailView (recipe: recipeBinding)) {
+                ForEach(viewModel.recipes) { recipe in
+                    NavigationLink(destination: viewModel.getRecipeDetailView(recipe: recipe)) {
                         RecipeRow(recipe: recipe)
                     }
                 }
             }
-            .navigationTitle("Recipes")
+            .navigationTitle(viewModel.navigationTitle)
             .navigationBarItems(trailing: Button(action: {
-                showAddView = true
+                viewModel.showAddRecipeView()
             }, label: {
-                Image(systemName: "plus")
+                Image(systemName: viewModel.showAddRecipeViewImageName)
             }))
-            .sheet(isPresented: $showAddView, content: {
+            .sheet(isPresented: $viewModel.showAddView, content: {
                 NavigationView {
-                    RecipeEditView(recipe: $recipeAdded, isNewRecipe: true)
+                    RecipeEditView(recipe: $viewModel.recipeAdded, isNewRecipe: true)
+//                    viewModel.getRecipeAddView()
                         .navigationBarItems(
                             leading: Button(action: {
-                                showAddView = false
+                                viewModel.cancelAddRecipe()
                             }, label: {
-                                Text("Cancel")
+                                Text(viewModel.cancelAddRecipeText)
                             }),
                             trailing: Button(action: {
-                                showAddView = false
-                                recipeAdded.imageName = "backup"
-                                model.recipes.append(recipeAdded)
-                                recipeAdded = Recipe()
+                                viewModel.addRecipe()
                             }, label: {
-                                Text("Done")
+                                Text(viewModel.addRecipeText)
                             }))
                 }
             })
         }
-        .environmentObject(model)
     }
 }
 

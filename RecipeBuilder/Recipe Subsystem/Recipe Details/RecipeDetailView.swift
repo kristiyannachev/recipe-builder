@@ -9,44 +9,45 @@ import SwiftUI
 
 struct RecipeDetailView: View {
     @Environment(\.colorScheme) var colorScheme
-    @EnvironmentObject private var model: Model
-    @Binding var recipe: Recipe
-    @State private var showEditView = false
-    @State private var recipeEdited = Recipe()
+    @ObservedObject var viewModel: RecipeDetailViewModel
+    
+    init(_ model: Model, recipe: Recipe) {
+        viewModel = RecipeDetailViewModel(model, recipe: recipe)
+    }
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: true) {
             VStack(alignment: .leading) {
                 VStack(alignment: .center) {
-                    Image(recipe.imageName)
+                    Image(viewModel.recipeImageName)
                         .resizable()
-                        .frame(height: 300)
+                        .frame(height: viewModel.imageHeight)
                         .scaledToFit()
-                        .clipShape(RoundedRectangle(cornerRadius: 15))
+                        .clipShape(RoundedRectangle(cornerRadius: viewModel.imageCornerRadius))
                 }
                 
                 Divider()
                 
-                VStack(alignment: .leading, spacing: 10) {
-                    Text("Recipe info")
+                VStack(alignment: .leading, spacing: viewModel.spacing) {
+                    Text(viewModel.recipeInfoHeadline)
                         .sectionHeadline(isDark: colorScheme == .dark)
-                    Label(recipe.author, systemImage: "person")
+                    Label(viewModel.authorText, systemImage: viewModel.authorImageName)
                     HStack() {
-                        Label("\(recipe.time.rawValue) minutes", systemImage: "clock")
+                        Label(viewModel.timeText, systemImage: viewModel.timeImageName)
                         Spacer()
-                        Label("\(recipe.servings.rawValue) servings", systemImage: "fork.knife")
+                        Label(viewModel.servingsText, systemImage: viewModel.servingsImageName)
                     }
                 }
                 .info(isDark: colorScheme == .dark)
                 
                 Divider()
                 
-                VStack(alignment: .leading, spacing: 10) {
-                    Text("Ingredients")
+                VStack(alignment: .leading, spacing: viewModel.spacing) {
+                    Text(viewModel.ingredientsInfoHeadline)
                         .sectionHeadline(isDark: colorScheme == .dark)
-                    ForEach(recipe.ingredients) { ingredient in
+                    ForEach(viewModel.recipe.ingredients) { ingredient in
                         HStack {
-                            Text("\(ingredient.content.rawValue) \(ingredient.content.emoji)   \(ingredient.value) \(ingredient.measurement.rawValue)")
+                            Text(viewModel.getIngredientText(ingredient))
                                 .info(isDark: colorScheme == .dark)
                         }
                     }
@@ -54,11 +55,11 @@ struct RecipeDetailView: View {
                 
                 Divider()
                 
-                VStack(alignment: .leading, spacing: 10) {
-                    Text("Steps")
+                VStack(alignment: .leading, spacing: viewModel.spacing) {
+                    Text(viewModel.stepsInfoHeadline)
                         .sectionHeadline(isDark: colorScheme == .dark)
-                    ForEach(Array(zip(recipe.steps.indices, recipe.steps)), id: \.0) { index, step in
-                        Text("\(index+1). \(step)")
+                    ForEach(Array(zip(viewModel.recipe.steps.indices, viewModel.recipe.steps)), id: \.0) { index, step in
+                        Text(viewModel.getStepText(index: index, step: step))
                             .fixedSize(horizontal: false, vertical: true)
                             .info(isDark: colorScheme == .dark)
                     }
@@ -68,47 +69,45 @@ struct RecipeDetailView: View {
                 Spacer()
             }
             .padding(.all)
-            .navigationTitle(recipe.title)
+            .navigationTitle(viewModel.recipe.title)
             .navigationBarItems(trailing: Button(action: {
-                recipeEdited = recipe
-                showEditView = true
+                viewModel.showEditRecipeView()
             }, label: {
-                Text("Edit")
+                Text(viewModel.showEditRecipeText)
             }))
-            .sheet(isPresented: $showEditView, content: {
-                NavigationView {
-                    RecipeEditView(recipe: $recipeEdited)
+            .sheet(isPresented: $viewModel.showEditView, content: {
+                NavigationView {                    RecipeEditView(recipe: $viewModel.recipeEdited)
+//                    viewModel.getRecipeEditView()
                         .navigationBarItems(
                             leading: Button(action: {
-                                showEditView = false
+                                viewModel.cancelSaveRecipe()
                             }, label: {
-                                Text("Cancel")
+                                Text(viewModel.cancelSaveRecipeText)
                             }),
                             trailing: Button(action: {
-                                showEditView = false
-                                recipe = recipeEdited
+                                viewModel.saveRecipe()
                             }, label: {
-                                Text("Done")
+                                Text(viewModel.saveRecipeText)
                             }))
                 }
             })
         }
-        .environmentObject(model)
     }
 }
 
 // MARK: Previews
 struct RecipeDetailView_Previews: PreviewProvider {
-    @State static var testRecipe = MockModel().recipes[0]
+    static var model = MockModel()
+    static var testRecipe = model.recipes[0]
 
     static var previews: some View {
         Group {
             NavigationView {
-                RecipeDetailView(recipe: $testRecipe)
+                RecipeDetailView(model, recipe: testRecipe)
             }
             
             NavigationView {
-                RecipeDetailView(recipe: $testRecipe)
+                RecipeDetailView(model, recipe: testRecipe)
                     .preferredColorScheme(.dark)
             }
         }
