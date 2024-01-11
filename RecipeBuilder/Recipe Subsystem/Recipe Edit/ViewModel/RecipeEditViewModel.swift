@@ -13,21 +13,21 @@ class RecipeEditViewModel: ObservableObject {
     var isNewRecipe: Bool
     @Published private var ingredient = Ingredient()
     
-    let recipeInfoSectionText = "Recipe info"
-    let recipeTitleTextFieldText = "Recipe title"
-    let authorTextFieldText = "Author"
-    let timeText = "Time"
-    let servingsText = "Servings"
-    let ingredientsSectionText = "Ingredients"
-    let removeIngredientImageName = "minus.circle"
-    let addImageName = "plus"
-    let spacing: CGFloat = 10
-    let ingredientValueTextFieldText = "Value"
-    let ingredientValueTextFieldTextWidth: CGFloat = 60
-    let ingredientMeasurementWidth: CGFloat = 35
-    let stepsSectionText = "Steps"
+    let recipeInfoSectionText = AppStrings.RecipeEdit.recipeInfoSectionText
+    let recipeTitleTextFieldText = AppStrings.RecipeEdit.recipeTitleTextFieldText
+    let authorTextFieldText = AppStrings.RecipeEdit.authorTextFieldText
+    let timeText = AppStrings.RecipeEdit.timeText
+    let servingsText = AppStrings.RecipeEdit.servingsText
+    let ingredientsSectionText = AppStrings.RecipeEdit.ingredientsSectionText
+    let removeIngredientImageName = AppStrings.RecipeEdit.removeIngredientImageName
+    let addImageName = AppStrings.RecipeEdit.addImageName
+    let spacing: CGFloat = AppConstants.RecipeEdit.spacing
+    let ingredientValueTextFieldText = AppStrings.RecipeEdit.ingredientValueTextFieldText
+    let ingredientValueTextFieldTextWidth: CGFloat = AppConstants.RecipeEdit.ingredientValueTextFieldTextWidth
+    let ingredientMeasurementWidth: CGFloat = AppConstants.RecipeEdit.ingredientMeasurementWidth
+    let stepsSectionText = AppStrings.RecipeEdit.stepsSectionText
     var navigationTitle: String {
-        "\(isNewRecipe ? "Add" : "Edit") recipe"
+        "\(isNewRecipe ? AppStrings.RecipeEdit.addRecipeTitle : AppStrings.RecipeEdit.editRecipeTitle) \(AppStrings.RecipeEdit.restRecipeTitle)"
     }
     
     

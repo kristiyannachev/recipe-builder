@@ -15,11 +15,11 @@ class StepEditViewModel: ObservableObject {
     var isNewStep: Bool {
         index == recipe.steps.count
     }
-    let stepTextFieldText = "Enter step here"
+    let stepTextFieldText = AppStrings.StepEdit.stepTextFieldText
     var navigationTitle: String {
-        "\(isNewStep ? "Add" : "Edit") step"
+        "\(isNewStep ? AppStrings.StepEdit.addStepTitle : AppStrings.StepEdit.editStepTitle) \(AppStrings.StepEdit.restStepTitle)"
     }
-    let saveStepText = "Save"
+    let saveStepText = AppStrings.StepEdit.saveStepText
     
     
     init(recipe: Binding<Recipe>, step: String, index: Int = 0) {

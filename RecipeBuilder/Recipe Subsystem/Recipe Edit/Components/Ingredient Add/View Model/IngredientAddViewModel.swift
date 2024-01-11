@@ -11,11 +11,11 @@ import SwiftUI
 class IngredientAddViewModel: ObservableObject {
     @Binding var recipe: Recipe
     @Published var ingredient = Ingredient()
-    let contentTextFieldText = "Content"
-    let valueTextFieldText = "Value"
-    let measurementPickerText = "Measurement"
-    let navigationTitle = "Add ingredient"
-    let saveIngredientText = "Save"
+    let contentTextFieldText = AppStrings.IngredientAdd.contentTextFieldText
+    let valueTextFieldText = AppStrings.IngredientAdd.valueTextFieldText
+    let measurementPickerText = AppStrings.IngredientAdd.measurementPickerText
+    let navigationTitle = AppStrings.IngredientAdd.navigationTitle
+    let saveIngredientText = AppStrings.IngredientAdd.saveIngredientText
 
     
     init(recipe: Binding<Recipe>, ingredient: Ingredient = Ingredient()) {

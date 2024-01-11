@@ -12,10 +12,10 @@ class RecipesViewModel: ObservableObject {
     private var model: Model
     @Published var showAddView = false
     @Published var recipeAdded = Recipe()
-    let navigationTitle = "Recipes"
-    let cancelAddRecipeText = "Cancel"
-    let addRecipeText = "Done"
-    let showAddRecipeViewImageName = "plus"
+    let navigationTitle = AppStrings.Recipes.navigationTitle
+    let cancelAddRecipeText = AppStrings.Recipes.cancelAddRecipeText
+    let addRecipeText = AppStrings.Recipes.addRecipeText
+    let showAddRecipeViewImageName = AppStrings.Recipes.showAddRecipeViewImageName
     var recipes: [Recipe] {
         model.recipes
     }
@@ -36,7 +36,7 @@ class RecipesViewModel: ObservableObject {
     
     func addRecipe() {
         showAddView = false
-        recipeAdded.imageName = "backup"
+        recipeAdded.imageName = AppStrings.Recipes.backupImageName
         model.recipes.append(recipeAdded)
         recipeAdded = Recipe()
     }

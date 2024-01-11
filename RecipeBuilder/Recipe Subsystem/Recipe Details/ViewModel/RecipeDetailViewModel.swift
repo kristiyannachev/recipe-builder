@@ -18,32 +18,32 @@ class RecipeDetailViewModel: ObservableObject {
     var recipeImageName: String {
         recipe.imageName
     }
-    let imageHeight: CGFloat = 300
-    let imageCornerRadius: CGFloat = 15
-    let spacing: CGFloat = 10
+    let imageHeight: CGFloat = AppConstants.RecipeDetail.imageHeight
+    let imageCornerRadius: CGFloat = AppConstants.RecipeDetail.imageCornerRadius
+    let spacing: CGFloat = AppConstants.RecipeDetail.spacing
     // Recipe info
-    let recipeInfoHeadline = "Recipe info"
+    let recipeInfoHeadline = AppStrings.RecipeDetail.recipeInfoHeadline
     var authorText: String {
         recipe.author
     }
-    let authorImageName = "person"
+    let authorImageName = AppStrings.RecipeDetail.authorImageName
     var timeText: String {
-        "\(recipe.time.rawValue) minutes"
+        "\(recipe.time.rawValue) \(AppStrings.RecipeDetail.restTimeText)"
     }
-    let timeImageName = "clock"
+    let timeImageName = AppStrings.RecipeDetail.timeImageName
     var servingsText: String {
-        "\(recipe.servings.rawValue) servings"
+        "\(recipe.servings.rawValue) \(AppStrings.RecipeDetail.restServingsText)"
     }
-    let servingsImageName = "fork.knife"
+    let servingsImageName = AppStrings.RecipeDetail.servingsImageName
     // Ingredients
-    let ingredientsInfoHeadline = "Ingredients"
+    let ingredientsInfoHeadline = AppStrings.RecipeDetail.ingredientsInfoHeadline
     // Steps
-    let stepsInfoHeadline = "Steps"
+    let stepsInfoHeadline = AppStrings.RecipeDetail.stepsInfoHeadline
     // Edit recipe
-    let showEditRecipeText = "Edit"
+    let showEditRecipeText = AppStrings.RecipeDetail.showEditRecipeText
     // Save recipe
-    let cancelSaveRecipeText = "Cancel"
-    let saveRecipeText = "Done"
+    let cancelSaveRecipeText = AppStrings.RecipeDetail.cancelSaveRecipeText
+    let saveRecipeText = AppStrings.RecipeDetail.saveRecipeText
     
     
     init(_ model: Model, recipe: Recipe) {

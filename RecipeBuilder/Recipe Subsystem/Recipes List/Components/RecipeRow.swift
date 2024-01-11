@@ -9,25 +9,28 @@ import SwiftUI
 
 struct RecipeRow: View {
     @Environment(\.colorScheme) var colorScheme
-
-    var recipe: Recipe
+    @ObservedObject var viewModel: RecipeRowViewModel
+    
+    init(recipe: Recipe) {
+        viewModel = RecipeRowViewModel(recipe: recipe)
+    }
     
     var body: some View {
         VStack {
             HStack(alignment: .top) {
-                Image(recipe.imageName)
+                Image(viewModel.recipe.imageName)
                     .resizable()
-                    .frame(width: 100, height: 100, alignment: .leading)
+                    .frame(width: viewModel.imageWidth, height: viewModel.imageHeight, alignment: .leading)
                     .scaledToFit()
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
+                    .clipShape(RoundedRectangle(cornerRadius: viewModel.imageCornerRadius))
                 
-                VStack(alignment: .leading, spacing: 10) {
-                    Text(recipe.title)
+                VStack(alignment: .leading, spacing: viewModel.spacing) {
+                    Text(viewModel.recipe.title)
                         .recipeRowHeadlineNoPadding(isDark: colorScheme == .dark)
                     VStack(alignment: .leading) {
-                        Label(recipe.author, systemImage: "person")
-                        Label("\(recipe.time.rawValue) minutes", systemImage: "clock")
-                        Label("\(recipe.servings.rawValue) servings", systemImage: "fork.knife")
+                        Label(viewModel.authorText, systemImage: viewModel.authorImageName)
+                        Label(viewModel.timeText, systemImage: viewModel.timeImageName)
+                        Label(viewModel.servingsText, systemImage: viewModel.servingsImageName)
                     }
                     .recipeRowInfo(isDark: colorScheme == .dark)
                 }
@@ -41,13 +44,14 @@ struct RecipeRow: View {
 // MARK: Previews
 struct RecipeRow_Previews: PreviewProvider {
     static var model = MockModel()
+    static var testRecipe = model.recipes[0]
     
     static var previews: some View {
         Group {
-            RecipeRow(recipe: model.recipes[0])
+            RecipeRow(recipe: testRecipe)
                 .previewLayout(.fixed(width: 400, height: 100))
             
-            RecipeRow(recipe: model.recipes[0])
+            RecipeRow(recipe: testRecipe)
                 .previewLayout(.fixed(width: 400, height: 100))
                 .preferredColorScheme(.dark)
         }
