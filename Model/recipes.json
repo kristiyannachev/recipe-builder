@@ -23,12 +23,12 @@
                  "value": 1
              },
              {
-                 "content": "Egg",
+                 "content": "Eggs",
                  "measurement": "pcs",
                  "value": 3
              },
              {
-                 "content": "Onion",
+                 "content": "Onions",
                  "measurement": "pcs",
                  "value": 1
              },
@@ -144,7 +144,7 @@
                 "value": 4
             },
             {
-                "content": "Egg",
+                "content": "Eggs",
                 "measurement": "pcs",
                 "value": 4
             },
@@ -178,7 +178,7 @@
         "image": "",
         "ingredients": [
             {
-                "content": "Carrot",
+                "content": "Carrots",
                 "measurement": "gr",
                 "value": 500
             },
@@ -193,12 +193,12 @@
                 "value": 400
             },
             {
-                "content": "Egg",
+                "content": "Eggs",
                 "measurement": "pcs",
                 "value": 3
             },
             {
-                "content": "Nut",
+                "content": "Nuts",
                 "measurement": "gr",
                 "value": 50
             },
@@ -233,17 +233,17 @@
         "image": "",
         "ingredients": [
             {
-                "content": "Potato",
+                "content": "Potatoes",
                 "measurement": "kg",
                 "value": 1
             },
             {
-                "content": "Carrot",
+                "content": "Carrots",
                 "measurement": "pcs",
                 "value": 2
             },
             {
-                "content": "Onion",
+                "content": "Onions",
                 "measurement": "pcs",
                 "value": 1
             },
@@ -283,7 +283,7 @@
                 "value": 2
             },
             {
-                "content": "Herb",
+                "content": "Herbs",
                 "measurement": "tsp",
                 "value": 3
             }
