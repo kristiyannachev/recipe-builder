@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct RecipeDetailView: View {
-    @Environment(\.colorScheme) var colorScheme
     @ObservedObject var viewModel: RecipeDetailViewModel
     
     init(_ model: Model, recipe: Recipe) {
@@ -30,7 +29,7 @@ struct RecipeDetailView: View {
                 
                 VStack(alignment: .leading, spacing: viewModel.spacing) {
                     Text(viewModel.recipeInfoHeadline)
-                        .sectionHeadline(isDark: colorScheme == .dark)
+                        .sectionHeadline()
                     Label(viewModel.authorText, systemImage: viewModel.authorImageName)
                     HStack() {
                         Label(viewModel.timeText, systemImage: viewModel.timeImageName)
@@ -38,17 +37,17 @@ struct RecipeDetailView: View {
                         Label(viewModel.servingsText, systemImage: viewModel.servingsImageName)
                     }
                 }
-                .info(isDark: colorScheme == .dark)
+                .info()
                 
                 Divider()
                 
                 VStack(alignment: .leading, spacing: viewModel.spacing) {
                     Text(viewModel.ingredientsInfoHeadline)
-                        .sectionHeadline(isDark: colorScheme == .dark)
+                        .sectionHeadline()
                     ForEach(viewModel.recipe.ingredients) { ingredient in
                         HStack {
                             Text(viewModel.getIngredientText(ingredient))
-                                .info(isDark: colorScheme == .dark)
+                                .info()
                         }
                     }
                 }
@@ -57,11 +56,11 @@ struct RecipeDetailView: View {
                 
                 VStack(alignment: .leading, spacing: viewModel.spacing) {
                     Text(viewModel.stepsInfoHeadline)
-                        .sectionHeadline(isDark: colorScheme == .dark)
+                        .sectionHeadline()
                     ForEach(Array(zip(viewModel.recipe.steps.indices, viewModel.recipe.steps)), id: \.0) { index, step in
                         Text(viewModel.getStepText(index: index, step: step))
                             .fixedSize(horizontal: false, vertical: true)
-                            .info(isDark: colorScheme == .dark)
+                            .info()
                     }
                     
                 }.foregroundColor(.accentColor)

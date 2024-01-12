@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct RecipeRow: View {
-    @Environment(\.colorScheme) var colorScheme
     @ObservedObject var viewModel: RecipeRowViewModel
     
     init(recipe: Recipe) {
@@ -26,13 +25,13 @@ struct RecipeRow: View {
                 
                 VStack(alignment: .leading, spacing: viewModel.spacing) {
                     Text(viewModel.recipe.title)
-                        .recipeRowHeadlineNoPadding(isDark: colorScheme == .dark)
+                        .recipeRowHeadlineNoPadding()
                     VStack(alignment: .leading) {
                         Label(viewModel.authorText, systemImage: viewModel.authorImageName)
                         Label(viewModel.timeText, systemImage: viewModel.timeImageName)
                         Label(viewModel.servingsText, systemImage: viewModel.servingsImageName)
                     }
-                    .recipeRowInfo(isDark: colorScheme == .dark)
+                    .recipeRowInfo()
                 }
                 
                 Spacer()

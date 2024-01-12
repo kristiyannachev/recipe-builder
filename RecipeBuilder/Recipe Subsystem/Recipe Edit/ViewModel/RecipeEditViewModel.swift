@@ -17,8 +17,8 @@ class RecipeEditViewModel: ObservableObject {
     let imageSectionText = AppStrings.RecipeEdit.imageSectionText
     let imageHeight: CGFloat = AppConstants.RecipeEdit.imageHeight
     let imageCornerRadius: CGFloat = AppConstants.RecipeEdit.imageCornerRadius
-    let editImageImageName = AppStrings.RecipeEdit.editImageImageName
     let imageCompressionQuality = AppConstants.RecipeEdit.imageCompressionQuality
+    let imageButtonPadding: CGFloat = AppConstants.RecipeEdit.imageButtonPadding
     // Recipe info
     let recipeInfoSectionText = AppStrings.RecipeEdit.recipeInfoSectionText
     let recipeTitleTextFieldText = AppStrings.RecipeEdit.recipeTitleTextFieldText

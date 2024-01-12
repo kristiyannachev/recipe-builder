@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct RecipeEditView: View {
-    @Environment(\.colorScheme) var colorScheme
     @ObservedObject var viewModel: RecipeEditViewModel
     @State var showingImagePicker = false
     @State var inputImage: UIImage?
@@ -29,17 +28,11 @@ struct RecipeEditView: View {
                             .clipShape(RoundedRectangle(cornerRadius: viewModel.imageCornerRadius))
                         
                         VStack {
-                            Button(action: {
+                            Button("") {
                                 showingImagePicker = true
-                            }, label: {
-                                Text(Image(systemName: viewModel.editImageImageName))
-                                    .info(isDark: colorScheme == .dark)
-                            })
-                            .padding(5)
-                            .background(colorScheme == .dark ? Color.black : Color.white)
-                            .clipShape(Circle())
-                            .shadow(radius: 5)
-                        }.padding(10)
+                            }
+                            .buttonStyle(EditImageButtonStyle())
+                        }.padding(viewModel.imageButtonPadding)
                     }
                 }
             }

@@ -9,18 +9,18 @@ import SwiftUI
 
 // MARK: InfoTextStyle
 struct RecipeRowInfoTextStyle: ViewModifier {
-    var isDark: Bool
-    
+    @Environment(\.colorScheme) var colorScheme
+
     func body(content: Content) -> some View {
         content
             .font(.system(size: 15.0, weight: .regular, design: .serif))
-            .foregroundColor(isDark ? UIStyle.primaryDarkMode : UIStyle.primaryLightMode)
+            .foregroundColor(colorScheme == .dark ? UIStyle.primaryDarkMode : UIStyle.primaryLightMode)
     }
 }
 
 // MARK: View + info
 extension View {
-    func recipeRowInfo(isDark: Bool) -> some View {
-        modifier(RecipeRowInfoTextStyle(isDark: isDark))
+    func recipeRowInfo() -> some View {
+        modifier(RecipeRowInfoTextStyle())
     }
 }
