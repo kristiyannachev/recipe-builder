@@ -5,6 +5,7 @@
         "time": "45",
         "servings": "8",
         "imageName": "spinach-lasagne",
+        "image": "",
         "ingredients": [
             {
                 "content": "Pasta",
@@ -78,6 +79,7 @@
         "time": "35",
         "servings": "3",
         "imageName": "chicken-breast-bacon",
+        "image": "",
         "ingredients": [
             {
                 "content": "Chicken",
@@ -124,6 +126,7 @@
         "time": "20",
         "servings": "3",
         "imageName": "kaiserschmarrn",
+        "image": "",
         "ingredients": [
             {
                 "content": "Flour",
@@ -172,6 +175,7 @@
         "time": "90",
         "servings": "12",
         "imageName": "carrot-cake",
+        "image": "",
         "ingredients": [
             {
                 "content": "Carrot",
@@ -226,6 +230,7 @@
         "time": "55",
         "servings": "8",
         "imageName": "potato-cream-soup",
+        "image": "",
         "ingredients": [
             {
                 "content": "Potato",

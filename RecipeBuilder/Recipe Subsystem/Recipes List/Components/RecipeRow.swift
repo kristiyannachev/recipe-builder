@@ -18,7 +18,7 @@ struct RecipeRow: View {
     var body: some View {
         VStack {
             HStack(alignment: .top) {
-                Image(viewModel.recipe.imageName)
+                viewModel.getImage()
                     .resizable()
                     .frame(width: viewModel.imageWidth, height: viewModel.imageHeight, alignment: .leading)
                     .scaledToFit()

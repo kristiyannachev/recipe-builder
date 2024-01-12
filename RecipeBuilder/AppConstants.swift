@@ -22,6 +22,9 @@ struct AppConstants {
     }
     
     enum RecipeEdit {
+        static let imageHeight: CGFloat = 250
+        static let imageCornerRadius: CGFloat = 10
+        static let imageCompressionQuality = 0.8
         static let spacing: CGFloat = 10
         static let ingredientValueTextFieldTextWidth: CGFloat = 60
         static let ingredientMeasurementWidth: CGFloat = 35

@@ -14,6 +14,7 @@ struct Recipe: Codable, Identifiable {
     var time: TimeValue = .five
     var servings: ServingsValue = .one
     var imageName: String = ""
+    var image: Data = Data()
     var ingredients: [Ingredient] = []
     var steps: [String] = []
     
@@ -76,7 +77,7 @@ struct Recipe: Codable, Identifiable {
         case twoHundredFourty = "240"
     }
     
-    private enum CodingKeys : String, CodingKey { case title, author, time, servings, imageName, ingredients, steps }
+    private enum CodingKeys : String, CodingKey { case title, author, time, servings, imageName, image, ingredients, steps }
 }
 
 extension StringProtocol {

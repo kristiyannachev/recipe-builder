@@ -13,11 +13,19 @@ class RecipeEditViewModel: ObservableObject {
     var isNewRecipe: Bool
     @Published private var ingredient = Ingredient()
     
+    // Image
+    let imageSectionText = AppStrings.RecipeEdit.imageSectionText
+    let imageHeight: CGFloat = AppConstants.RecipeEdit.imageHeight
+    let imageCornerRadius: CGFloat = AppConstants.RecipeEdit.imageCornerRadius
+    let editImageImageName = AppStrings.RecipeEdit.editImageImageName
+    let imageCompressionQuality = AppConstants.RecipeEdit.imageCompressionQuality
+    // Recipe info
     let recipeInfoSectionText = AppStrings.RecipeEdit.recipeInfoSectionText
     let recipeTitleTextFieldText = AppStrings.RecipeEdit.recipeTitleTextFieldText
     let authorTextFieldText = AppStrings.RecipeEdit.authorTextFieldText
     let timeText = AppStrings.RecipeEdit.timeText
     let servingsText = AppStrings.RecipeEdit.servingsText
+    // Ingredients
     let ingredientsSectionText = AppStrings.RecipeEdit.ingredientsSectionText
     let removeIngredientImageName = AppStrings.RecipeEdit.removeIngredientImageName
     let addImageName = AppStrings.RecipeEdit.addImageName
@@ -25,6 +33,7 @@ class RecipeEditViewModel: ObservableObject {
     let ingredientValueTextFieldText = AppStrings.RecipeEdit.ingredientValueTextFieldText
     let ingredientValueTextFieldTextWidth: CGFloat = AppConstants.RecipeEdit.ingredientValueTextFieldTextWidth
     let ingredientMeasurementWidth: CGFloat = AppConstants.RecipeEdit.ingredientMeasurementWidth
+    // Steps
     let stepsSectionText = AppStrings.RecipeEdit.stepsSectionText
     var navigationTitle: String {
         "\(isNewRecipe ? AppStrings.RecipeEdit.addRecipeTitle : AppStrings.RecipeEdit.editRecipeTitle) \(AppStrings.RecipeEdit.restRecipeTitle)"
@@ -64,5 +73,12 @@ class RecipeEditViewModel: ObservableObject {
     func removeIngredient(_ ingredient: Ingredient) {
         let ingredientIndex = recipe.ingredients.firstIndex(where: {$0.id == ingredient.id })!
         recipe.ingredients.remove(at: ingredientIndex)
+    }
+    
+    func getImage() -> Image {
+        if recipe.image == Data() {
+            return Image(recipe.imageName)
+        }
+        return Image(uiImage: UIImage(data: recipe.image) ?? UIImage())
     }
 }

@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct RecipeEditView: View {
+    @Environment(\.colorScheme) var colorScheme
     @ObservedObject var viewModel: RecipeEditViewModel
+    @State var showingImagePicker = false
+    @State var inputImage: UIImage?
     
     init(recipe: Binding<Recipe>, isNewRecipe: Bool) {
         viewModel = RecipeEditViewModel(recipe: recipe, isNewRecipe: isNewRecipe)
@@ -16,6 +19,31 @@ struct RecipeEditView: View {
     
     var body: some View {
         Form {
+            Section(header: Text(viewModel.imageSectionText)) {
+                ZStack(alignment: .center) {
+                    ZStack(alignment: .topTrailing) {
+                        viewModel.getImage()
+                            .resizable()
+                            .frame(height: viewModel.imageHeight)
+                            .scaledToFit()
+                            .clipShape(RoundedRectangle(cornerRadius: viewModel.imageCornerRadius))
+                        
+                        VStack {
+                            Button(action: {
+                                showingImagePicker = true
+                            }, label: {
+                                Text(Image(systemName: viewModel.editImageImageName))
+                                    .info(isDark: colorScheme == .dark)
+                            })
+                            .padding(5)
+                            .background(colorScheme == .dark ? Color.black : Color.white)
+                            .clipShape(Circle())
+                            .shadow(radius: 5)
+                        }.padding(10)
+                    }
+                }
+            }
+            
             Section(header: Text(viewModel.recipeInfoSectionText)) {
                 TextField(viewModel.recipeTitleTextFieldText, text: $viewModel.recipe.title)
                     .disableAutocorrection(true)
@@ -106,7 +134,18 @@ struct RecipeEditView: View {
                     .opacity(0)
                 }
             }
-        }.navigationTitle(viewModel.navigationTitle)
+        }
+        .navigationTitle(viewModel.navigationTitle)
+        .onChange(of: inputImage) { _ in loadImage() }
+        .sheet(isPresented: $showingImagePicker) {
+            ImagePicker(image: $inputImage)
+        }
+    }
+    
+    func loadImage() {
+        guard let inputImage = inputImage else { return }
+        let data = inputImage.jpegData(compressionQuality: viewModel.imageCompressionQuality) ?? Data()
+        viewModel.recipe.image = data
     }
 }
 

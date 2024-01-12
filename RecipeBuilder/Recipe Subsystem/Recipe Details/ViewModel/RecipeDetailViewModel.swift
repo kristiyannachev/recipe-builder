@@ -15,9 +15,6 @@ class RecipeDetailViewModel: ObservableObject {
     @Published var recipeEdited = Recipe()
     
     // Recipe image
-    var recipeImageName: String {
-        recipe.imageName
-    }
     let imageHeight: CGFloat = AppConstants.RecipeDetail.imageHeight
     let imageCornerRadius: CGFloat = AppConstants.RecipeDetail.imageCornerRadius
     let spacing: CGFloat = AppConstants.RecipeDetail.spacing
@@ -73,5 +70,12 @@ class RecipeDetailViewModel: ObservableObject {
         showEditView = false
         recipe = recipeEdited
         model.saveRecipe(recipe: recipe)
+    }
+    
+    func getImage() -> Image {
+        if recipe.image == Data() {
+            return Image(recipe.imageName)
+        }
+        return Image(uiImage: UIImage(data: recipe.image) ?? UIImage())
     }
 }

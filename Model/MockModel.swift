@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class MockModel: Model {
     convenience init() {
@@ -14,6 +15,7 @@ class MockModel: Model {
                              time: .fourtyFive,
                              servings: .eight,
                              imageName: "spinach-lasagne",
+                             image: Data(),
                              ingredients: [
                                Ingredient(content: .pasta, measurement: .grams, value: 500),
                                Ingredient(content: .spinach, measurement: .grams, value: 500),

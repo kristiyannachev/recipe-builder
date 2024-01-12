@@ -40,6 +40,8 @@ struct AppStrings {
     }
     
     enum RecipeEdit {
+        static let imageSectionText = "Image"
+        static let editImageImageName = "pencil"
         static let recipeInfoSectionText = "Recipe info"
         static let recipeTitleTextFieldText = "Recipe title"
         static let authorTextFieldText = "Author"

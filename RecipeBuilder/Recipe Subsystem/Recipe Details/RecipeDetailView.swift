@@ -19,7 +19,7 @@ struct RecipeDetailView: View {
         ScrollView(.vertical, showsIndicators: true) {
             VStack(alignment: .leading) {
                 VStack(alignment: .center) {
-                    Image(viewModel.recipeImageName)
+                    viewModel.getImage()
                         .resizable()
                         .frame(height: viewModel.imageHeight)
                         .scaledToFit()

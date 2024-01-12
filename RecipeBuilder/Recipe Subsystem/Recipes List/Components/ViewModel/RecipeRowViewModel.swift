@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class RecipeRowViewModel: ObservableObject {
     var recipe: Recipe
@@ -31,5 +32,12 @@ class RecipeRowViewModel: ObservableObject {
     
     init(recipe: Recipe) {
         self.recipe = recipe
+    }
+    
+    func getImage() -> Image {
+        if recipe.image == Data() {
+            return Image(recipe.imageName)
+        }
+        return Image(uiImage: UIImage(data: recipe.image) ?? UIImage())
     }
 }
