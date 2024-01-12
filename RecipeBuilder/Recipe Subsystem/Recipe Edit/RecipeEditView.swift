@@ -98,7 +98,7 @@ struct RecipeEditView: View {
                     .foregroundColor(.accentColor)
                     
                     NavigationLink(destination: IngredientAddView(recipe: $viewModel.recipe)) {
-                        Rectangle()
+                        EmptyView()
                     }
                     .opacity(0)
                 }
@@ -122,7 +122,7 @@ struct RecipeEditView: View {
                     .foregroundColor(.accentColor)
                     
                     NavigationLink(destination: StepEditView(recipe: $viewModel.recipe, index: viewModel.recipe.steps.count)) {
-                        Rectangle()
+                        EmptyView()
                     }
                     .opacity(0)
                 }
