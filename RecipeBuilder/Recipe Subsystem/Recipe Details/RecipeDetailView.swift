@@ -30,7 +30,11 @@ struct RecipeDetailView: View {
                 VStack(alignment: .leading, spacing: viewModel.spacing) {
                     Text(viewModel.recipeInfoHeadline)
                         .sectionHeadline()
-                    Label(viewModel.authorText, systemImage: viewModel.authorImageName)
+                    HStack() {
+                        Label(viewModel.authorText, systemImage: viewModel.authorImageName)
+                        Spacer()
+                        Label(viewModel.categoryText, systemImage: viewModel.categoryImageName)
+                    }
                     HStack() {
                         Label(viewModel.timeText, systemImage: viewModel.timeImageName)
                         Spacer()

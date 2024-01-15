@@ -28,6 +28,7 @@ struct AppStrings {
     enum RecipeDetail {
         static let recipeInfoHeadline = "Recipe info"
         static let authorImageName = "person"
+        static let categoryImageName = "folder"
         static let restTimeText = "minutes"
         static let timeImageName = "clock"
         static let restServingsText = "servings"
@@ -45,6 +46,7 @@ struct AppStrings {
         static let recipeInfoSectionText = "Recipe info"
         static let recipeTitleTextFieldText = "Recipe title"
         static let authorTextFieldText = "Author"
+        static let categoryText = "Category"
         static let timeText = "Time"
         static let servingsText = "Servings"
         static let ingredientsSectionText = "Ingredients"

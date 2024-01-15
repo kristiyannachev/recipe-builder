@@ -11,12 +11,25 @@ struct Recipe: Codable, Identifiable {
     var id: UUID = UUID()
     var title: String = ""
     var author: String = ""
+    var category: CategoryValue = .other
     var time: TimeValue = .five
     var servings: ServingsValue = .one
     var imageName: String = ""
     var image: Data = Data()
     var ingredients: [Ingredient] = []
     var steps: [String] = []
+    
+    enum CategoryValue: String, Codable, CaseIterable {
+        case breakfast = "Breakfast"
+        case soups = "Soups"
+        case chicken = "Chicken"
+        case pork = "Pork"
+        case otherMeat = "Meat"
+        case vegetarian = "Vegetarian"
+        case cakes = "Cakes"
+        case sweets = "Sweets"
+        case other = "Other"
+    }
     
     enum ServingsValue: String, Codable, CaseIterable {
         case one = "1"
@@ -77,7 +90,7 @@ struct Recipe: Codable, Identifiable {
         case twoHundredFourty = "240"
     }
     
-    private enum CodingKeys : String, CodingKey { case title, author, time, servings, imageName, image, ingredients, steps }
+    private enum CodingKeys : String, CodingKey { case title, author, category, time, servings, imageName, image, ingredients, steps }
 }
 
 extension StringProtocol {

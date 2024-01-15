@@ -24,6 +24,10 @@ class RecipeDetailViewModel: ObservableObject {
         recipe.author
     }
     let authorImageName = AppStrings.RecipeDetail.authorImageName
+    var categoryText: String {
+        recipe.category.rawValue
+    }
+    let categoryImageName = AppStrings.RecipeDetail.categoryImageName
     var timeText: String {
         "\(recipe.time.rawValue) \(AppStrings.RecipeDetail.restTimeText)"
     }

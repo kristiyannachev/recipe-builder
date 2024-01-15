@@ -23,6 +23,7 @@ class RecipeEditViewModel: ObservableObject {
     let recipeInfoSectionText = AppStrings.RecipeEdit.recipeInfoSectionText
     let recipeTitleTextFieldText = AppStrings.RecipeEdit.recipeTitleTextFieldText
     let authorTextFieldText = AppStrings.RecipeEdit.authorTextFieldText
+    let categoryText = AppStrings.RecipeEdit.categoryText
     let timeText = AppStrings.RecipeEdit.timeText
     let servingsText = AppStrings.RecipeEdit.servingsText
     // Ingredients
@@ -45,6 +46,10 @@ class RecipeEditViewModel: ObservableObject {
         self.isNewRecipe = isNewRecipe
     }
     
+    
+    func getCategoryValueText(_ categoryValue: Recipe.CategoryValue) -> String {
+        categoryValue.rawValue
+    }
     
     func getTimeValueText(_ timeValue: Recipe.TimeValue) -> String {
         timeValue.rawValue

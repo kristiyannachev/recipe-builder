@@ -43,6 +43,13 @@ struct RecipeEditView: View {
                 
                 TextField(viewModel.authorTextFieldText, text: $viewModel.recipe.author)
                     .disableAutocorrection(true)
+                
+                Picker(selection: $viewModel.recipe.category, label: Text(viewModel.categoryText)) {
+                    ForEach(Recipe.CategoryValue.allCases, id: \.self) { categoryValue in
+                        Text(viewModel.getCategoryValueText(categoryValue))
+                    }
+                }
+                .pickerStyle(DefaultPickerStyle())
 
                 Picker(selection: $viewModel.recipe.time, label: Text(viewModel.timeText)) {
                     ForEach(Recipe.TimeValue.allCases, id: \.self) { timeValue in

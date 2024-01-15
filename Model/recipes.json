@@ -2,6 +2,7 @@
     {
         "title": "Spinach lasagne",
         "author": "Kris",
+        "category": "Vegetarian",
         "time": "45",
         "servings": "8",
         "imageName": "spinach-lasagne",
@@ -76,6 +77,7 @@
     {
         "title": "Chicken in bacon",
         "author": "Kras",
+        "category": "Chicken",
         "time": "35",
         "servings": "3",
         "imageName": "chicken-breast-bacon",
@@ -123,6 +125,7 @@
     {
         "title": "Kaiserschmarrn",
         "author": "Kros",
+        "category": "Breakfast",
         "time": "20",
         "servings": "3",
         "imageName": "kaiserschmarrn",
@@ -172,6 +175,7 @@
     {
         "title": "Carrot cake",
         "author": "Krus",
+        "category": "Cakes",
         "time": "90",
         "servings": "12",
         "imageName": "carrot-cake",
@@ -227,6 +231,7 @@
     {
         "title": "Potato cream soup",
         "author": "Krys",
+        "category": "Soups",
         "time": "55",
         "servings": "8",
         "imageName": "potato-cream-soup",
