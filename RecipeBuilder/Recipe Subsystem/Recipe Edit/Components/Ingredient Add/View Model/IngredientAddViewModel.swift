@@ -25,7 +25,7 @@ class IngredientAddViewModel: ObservableObject {
     
     
     func getIngredientContentText(_ ingredientContent: Ingredient.IngredientContent) -> String {
-        "\(ingredientContent.rawValue) \(ingredientContent.emoji)"
+        "\(ingredientContent.asReadableString) \(ingredientContent.emoji)"
     }
     
     func getIngredientMeasurementText(_ ingredientMeasurement: Ingredient.IngredientMeasurement) -> String {

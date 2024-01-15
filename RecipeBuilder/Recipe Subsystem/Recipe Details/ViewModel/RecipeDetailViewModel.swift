@@ -50,7 +50,7 @@ class RecipeDetailViewModel: ObservableObject {
     
     
     func getIngredientText(_ ingredient: Ingredient) -> String {
-        "\(ingredient.content.rawValue) \(ingredient.content.emoji)   \(ingredient.value) \(ingredient.measurement.rawValue)"
+        "\(ingredient.content.asReadableString) \(ingredient.content.emoji)   \(ingredient.value) \(ingredient.measurement.rawValue)"
     }
     
     func getStepText(index: Int, step: String) -> String {
