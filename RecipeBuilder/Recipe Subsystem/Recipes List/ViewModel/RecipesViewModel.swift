@@ -10,19 +10,24 @@ import SwiftUI
 
 class RecipesViewModel: ObservableObject {
     private var model: Model
+    private var category: Recipe.CategoryValue
     @Published var showAddView = false
     @Published var recipeAdded = Recipe()
-    let navigationTitle = AppStrings.Recipes.navigationTitle
+    var navigationTitle: String {
+        "\(category.rawValue) \(AppStrings.Recipes.navigationTitle)"
+    }
     let cancelAddRecipeText = AppStrings.Recipes.cancelAddRecipeText
     let addRecipeText = AppStrings.Recipes.addRecipeText
     let showAddRecipeViewImageName = AppStrings.Recipes.showAddRecipeViewImageName
     var recipes: [Recipe] {
-        model.recipes
+        model.getRecipesForCategory(category: category)
     }
     
     
-    init(_ model: Model) {
+    init(_ model: Model, category: Recipe.CategoryValue) {
         self.model = model
+        self.category = category
+        self.recipeAdded.category = category
     }
     
     

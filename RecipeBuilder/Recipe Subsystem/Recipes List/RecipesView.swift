@@ -10,57 +10,56 @@ import SwiftUI
 struct RecipesView: View {
     @ObservedObject var viewModel: RecipesViewModel
     
-    init(_ model: Model) {
-        viewModel = RecipesViewModel(model)
+    init(_ model: Model, category: Recipe.CategoryValue) {
+        viewModel = RecipesViewModel(model, category: category)
     }
     
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(viewModel.recipes) { recipe in
-                    NavigationLink(destination: viewModel.getRecipeDetailView(recipe: recipe)) {
-                        RecipeRow(recipe: recipe)
-                    }
+        List {
+            ForEach(viewModel.recipes) { recipe in
+                NavigationLink(destination: viewModel.getRecipeDetailView(recipe: recipe)) {
+                    RecipeRow(recipe: recipe)
                 }
             }
-            .navigationTitle(viewModel.navigationTitle)
-            .navigationBarItems(trailing: Button(action: {
-                viewModel.showAddRecipeView()
-            }, label: {
-                Image(systemName: viewModel.showAddRecipeViewImageName)
-            }))
-            .sheet(isPresented: $viewModel.showAddView, content: {
-                NavigationView {
-                    RecipeEditView(recipe: $viewModel.recipeAdded, isNewRecipe: true)
-                        .navigationBarItems(
-                            leading: Button(action: {
-                                viewModel.cancelAddRecipe()
-                            }, label: {
-                                Text(viewModel.cancelAddRecipeText)
-                            }),
-                            trailing: Button(action: {
-                                viewModel.addRecipe()
-                            }, label: {
-                                Text(viewModel.addRecipeText)
-                            }))
-                }
-            })
         }
+        .navigationTitle(viewModel.navigationTitle)
+        .navigationBarItems(trailing: Button(action: {
+            viewModel.showAddRecipeView()
+        }, label: {
+            Image(systemName: viewModel.showAddRecipeViewImageName)
+        }))
+        .sheet(isPresented: $viewModel.showAddView, content: {
+            NavigationView {
+                RecipeEditView(recipe: $viewModel.recipeAdded, isNewRecipe: true)
+                    .navigationBarItems(
+                        leading: Button(action: {
+                            viewModel.cancelAddRecipe()
+                        }, label: {
+                            Text(viewModel.cancelAddRecipeText)
+                        }),
+                        trailing: Button(action: {
+                            viewModel.addRecipe()
+                        }, label: {
+                            Text(viewModel.addRecipeText)
+                        }))
+            }
+        })
     }
 }
 
 // MARK: Previews
 struct RecipesView_Previews: PreviewProvider {
     static var model = MockModel()
+    static var category: Recipe.CategoryValue = .other
     
     static var previews: some View {
         Group {
             NavigationView {
-                RecipesView(model)
+                RecipesView(model, category: category)
             }
             
             NavigationView {
-                RecipesView(model)
+                RecipesView(model, category: category)
                     .preferredColorScheme(.dark)
             }
         }

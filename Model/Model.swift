@@ -17,6 +17,10 @@ class Model: ObservableObject {
     func saveRecipe(recipe: Recipe) {
         recipes = recipes.replacingOldElement(withNewElement: recipe)
     }
+    
+    func getRecipesForCategory(category: Recipe.CategoryValue) -> [Recipe] {
+        recipes.filter{ $0.category == category }
+    }
 }
 
 extension Array where Element: Identifiable {

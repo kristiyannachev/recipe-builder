@@ -8,6 +8,10 @@
 import Foundation
 
 struct AppStrings {
+    enum Categories {
+        static let navigationTitle = "Recipe Categories"
+    }
+    
     enum Recipes {
         static let navigationTitle = "Recipes"
         static let cancelAddRecipeText = "Cancel"
