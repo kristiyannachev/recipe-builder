@@ -38,7 +38,7 @@ struct Ingredient: Codable, Hashable, Identifiable {
         case raspberry = "Raspberries"
         case kiwi = "Kiwis"
         case tomato = "Tomatoes"
-        case oliveOil = "Olive oil"
+        case oliveOil = "OliveOil"
         case coconut = "Coconuts"
         case coconutChips = "CoconutChips"
         
@@ -174,8 +174,10 @@ struct Ingredient: Codable, Hashable, Identifiable {
         case chocolate = "Chocolate"
         case whiteChocolate = "WhiteChocolate"
         case honey = "Honey"
+        case appleMousse = "AppleMousse"
         case mapleSyrop = "MapleSyrop"
         case orangePeels = "OrangePeels"
+        case freshOrangePeel = "FreshOrangePeel"
         
         // Liquids
         case water = "Water"
@@ -366,8 +368,10 @@ struct Ingredient: Codable, Hashable, Identifiable {
             case .chocolate: return "🍫"
             case .whiteChocolate: return "⚪"
             case .honey: return "🍯"
+            case .appleMousse: return "🍯"
             case .mapleSyrop: return "🍁"
             case .orangePeels: return "🔸"
+            case .freshOrangePeel: return "🍊"
             case .water: return "🚰"
             case .sparklingWater: return "🫧"
             case .bouillon: return "🍲"

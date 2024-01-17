@@ -1,9 +1,9 @@
 [
     {
         "title": "Spinach lasagne",
-        "author": "Kris",
+        "author": "StoyanLora",
         "category": "Vegetarian",
-        "time": "45",
+        "time": "100",
         "servings": "8",
         "imageName": "spinach-lasagne",
         "image": "",
@@ -19,9 +19,24 @@
                  "value": 500
              },
              {
+                 "content": "Ricotta",
+                 "measurement": "gr",
+                 "value": 700
+             },
+             {
+                 "content": "Mozzarella",
+                 "measurement": "gr",
+                 "value": 500
+             },
+             {
                  "content": "Cheese",
-                 "measurement": "kg",
-                 "value": 1
+                 "measurement": "gr",
+                 "value": 200
+             },
+             {
+                 "content": "Parmesan",
+                 "measurement": "gr",
+                 "value": 100
              },
              {
                  "content": "Eggs",
@@ -39,7 +54,7 @@
                  "value": 2
              },
              {
-                 "content": "Olive oil",
+                 "content": "OliveOil",
                  "measurement": "tbsp",
                  "value": 2
              },
@@ -59,9 +74,14 @@
                  "value": 60
              },
              {
+                 "content": "Mustard",
+                 "measurement": "tbsp",
+                 "value": 1
+             },
+             {
                  "content": "Salt",
                  "measurement": "mg",
-                 "value": 8
+                 "value": 2
              }
         ],
         "steps": [
@@ -76,42 +96,47 @@
     },
     {
         "title": "Chicken in bacon",
-        "author": "Kras",
+        "author": "StoyanLora",
         "category": "Chicken",
         "time": "35",
-        "servings": "3",
+        "servings": "6",
         "imageName": "chicken-breast-bacon",
         "image": "",
         "ingredients": [
             {
                 "content": "Chicken",
-                "measurement": "gr",
-                "value": 600
+                "measurement": "kg",
+                "value": 1200
             },
             {
-                "content": "Cheese",
+                "content": "Ricotta",
                 "measurement": "gr",
-                "value": 170
+                "value": 300
+            },
+            {
+                "content": "SourCream",
+                "measurement": "tbsp",
+                "value": 4
             },
             {
                 "content": "Mustard",
                 "measurement": "tbsp",
-                "value": 1
-            },
-            {
-                "content": "Bacon",
-                "measurement": "gr",
-                "value": 150
+                "value": 2
             },
             {
                 "content": "Garlic",
                 "measurement": "sl",
-                "value": 1
+                "value": 2
+            },
+            {
+                "content": "Bacon",
+                "measurement": "gr",
+                "value": 300
             },
             {
                 "content": "Salt",
                 "measurement": "mg",
-                "value": 8
+                "value": 1
             }
         ],
         "steps": [
@@ -124,57 +149,71 @@
     },
     {
         "title": "Kaiserschmarrn",
-        "author": "Kros",
+        "author": "Kris",
         "category": "Breakfast",
-        "time": "20",
-        "servings": "3",
+        "time": "40",
+        "servings": "4",
         "imageName": "kaiserschmarrn",
         "image": "",
         "ingredients": [
             {
                 "content": "Flour",
                 "measurement": "gr",
-                "value": 200
+                "value": 300
             },
             {
                 "content": "Sugar",
                 "measurement": "gr",
-                "value": 30
+                "value": 45
             },
             {
                 "content": "Salt",
-                "measurement": "gr",
-                "value": 4
+                "measurement": "mg",
+                "value": 1
             },
             {
                 "content": "Eggs",
                 "measurement": "pcs",
-                "value": 4
+                "value": 6
             },
             {
                 "content": "Milk",
                 "measurement": "ml",
-                "value": 300
+                "value": 450
             },
             {
                 "content": "Butter",
                 "measurement": "gr",
-                "value": 40
+                "value": 60
+            },
+            {
+                "content": "Raisins",
+                "measurement": "gr",
+                "value": 45
+            },
+            {
+                "content": "PowderedSugar",
+                "measurement": "gr",
+                "value": 5
+            },
+            {
+                "content": "AppleMousse",
+                "measurement": "pcs",
+                "value": 1
             }
         ],
         "steps": [
             "To make this delicious Kaiserschmarrn, first mix the flour, sugar, salt and egg yolks with the milk in a bowl to form a smooth, thick batter.",
             "In another bowl, beat the egg whites until stiff and then fold into the thick batter.",
             "Foam the butter in a large, shallow pan (Ø 22-24 cm) so that it is very hot, slowly pour in the batter and fry on both sides using a spatula.",
-            "Then bake the pan in a preheated oven at a moderate heat (hot air approx. 180°C) for 10-12 minutes until the Kaiserschmarren is lightly golden brown.",
-            "Then remove the pan from the oven and tear the finished dough into irregular pieces with two spoons.",
-            "Now add the raisins, mix well and place the pan back in the oven for approx. 1 minute while still hot.",
-            "Arrange the pancakes on plates, sprinkle with sugar and serve with any compote or apple sauce."
+            "Then remove the pan from the boiler and tear the finished dough into irregular pieces with two spoons.",
+            "Now add the raisins, mix well and place the pan back оn the boiler for approx. 1 minute while still hot.",
+            "Arrange the pancakes on plates, sprinkle with sugar and serve with any compote or apple mousse."
         ]
     },
     {
         "title": "Carrot cake",
-        "author": "Krus",
+        "author": "Yoli",
         "category": "Cakes",
         "time": "90",
         "servings": "12",
@@ -182,55 +221,107 @@
         "image": "",
         "ingredients": [
             {
-                "content": "Carrots",
-                "measurement": "gr",
-                "value": 500
-            },
-            {
-                "content": "Flour",
-                "measurement": "gr",
-                "value": 300
-            },
-            {
-                "content": "Sugar",
-                "measurement": "gr",
-                "value": 400
-            },
-            {
                 "content": "Eggs",
                 "measurement": "pcs",
                 "value": 3
             },
             {
-                "content": "Nuts",
+                "content": "Sugar",
+                "measurement": "gr",
+                "value": 200
+            },
+            {
+                "content": "OrangeJuice",
+                "measurement": "ml",
+                "value": 80
+            },
+            {
+                "content": "Carrots",
+                "measurement": "gr",
+                "value": 200
+            },
+            {
+                "content": "OrangePeels",
+                "measurement": "gr",
+                "value": 40
+            },
+            {
+                "content": "Cinnamon",
+                "measurement": "tsp",
+                "value": 1
+            },
+            {
+                "content": "Ginger",
+                "measurement": "tsp",
+                "value": 1
+            },
+            {
+                "content": "Salt",
+                "measurement": "mg",
+                "value": 1
+            },
+            {
+                "content": "Flour",
+                "measurement": "gr",
+                "value": 250
+            },
+            {
+                "content": "BakingPowder",
+                "measurement": "tsp",
+                "value": 1
+            },
+            {
+                "content": "BakingSoda",
+                "measurement": "gr",
+                "value": 2
+            },
+            {
+                "content": "Raisins",
                 "measurement": "gr",
                 "value": 50
             },
             {
                 "content": "Oil",
                 "measurement": "ml",
-                "value": 100
+                "value": 80
             },
             {
-                "content": "Salt",
+                "content": "CreamCheese",
                 "measurement": "gr",
-                "value": 4
+                "value": 800
             },
+            {
+                "content": "PowderedSugar",
+                "measurement": "gr",
+                "value": 150
+            },
+            {
+                "content": "Vanilla",
+                "measurement": "pcs",
+                "value": 1
+            },
+            {
+                "content": "SourCream",
+                "measurement": "gr",
+                "value": 200
+            },
+            {
+                "content": "FreshOrangePeel",
+                "measurement": "tsp",
+                "value": 1
+            }
         ],
         "steps": [
-            "Grate the carrots and mix with the crushed walnuts. Add all the remaining ingredients for the marshmallows, beating the eggs beforehand.",
-            "Stir with hands until homogeneous.",
-            "Pour it into a greased tin with baking paper and bake in a preheated oven at 170 degrees with a fan for 40-45 minutes.",
-            "When the marshmallow is ready, leave to cool and cut crosswise in half.",
-            "Beat the cream lightly with a mixer without making it fluffy. Beat the cheese with the caster sugar and mix with the cream and grated orange zest. Stir gently with a spatula.",
-            "One half of the marshmallow is placed as the base of the cake and spread with half of the cream.",
-            "Cover with the second layer and spread the remaining cream all over the cake.",
-            "Top the cake generously with walnuts. Leave to stand in the fridge for a few hours."
+            "Beat the eggs with the sugar to a fluffy cream and add the orange juice. Fold in the carrots, vanilla and orange zest.",
+            "Mix the flour together with the spices, the two types of raising agent and the raisins. Judge the quantities of spices according to your taste. Add it to the egg mixture and mix. Finally, pour in the oil and mix everything well.",
+            "Pour the batter into a 22 or 24 cm cake tin, covered with baking paper (if you want the marshmallows to be thinner, bake the batter in a larger tin). Preheat the oven to 180* and bake the marshmallows for about 35-40 minutes. Once well cooled cut it horizontally into three parts.",
+            "For the cream, beat the cream cheese with the sugar, vanilla and orange zest. Add the cream and mix.",
+            "Assemble the cake by spreading a layer of cream between each carrot cake.  Spread the cream all over the sides and top of the cake. Smooth and decorate as desired. Enjoy!"
         ]
     },
     {
         "title": "Potato cream soup",
-        "author": "Krys",
+        "author": "Osata",
         "category": "Soups",
         "time": "55",
         "servings": "8",
@@ -263,19 +354,14 @@
                 "value": 300
             },
             {
-                "content": "Water",
-                "measurement": "l",
-                "value": 1
-            },
-            {
-                "content": "Chicken",
+                "content": "Bouillon",
                 "measurement": "tsp",
                 "value": 1
             },
             {
                 "content": "Salt",
                 "measurement": "mg",
-                "value": 8
+                "value": 1
             },
             {
                 "content": "Bread",
@@ -283,14 +369,24 @@
                 "value": 3
             },
             {
-                "content": "Olive oil",
+                "content": "OliveOil",
                 "measurement": "tbsp",
                 "value": 2
             },
             {
-                "content": "Herbs",
+                "content": "Oregano",
                 "measurement": "tsp",
-                "value": 3
+                "value": 1
+            },
+            {
+                "content": "Basil",
+                "measurement": "tsp",
+                "value": 1
+            },
+            {
+                "content": "Rosemary",
+                "measurement": "tsp",
+                "value": 1
             }
         ],
         "steps": [
@@ -303,6 +399,68 @@
             "While the soup is boiling, prepare the croutons. Cut the bread slices into cubes and place in a suitable baking dish and sprinkle with the spices.",
             "Pour the olive oil over them, toss well and bake for 8-10 minutes in a preheated oven at 200 degrees, basting every 2-3 minutes.",
             "The potato cream soup is served hot with the croutons."
+        ]
+    },
+    {
+        "title": "Turkish red lentil soup",
+        "author": "StoyanLora",
+        "category": "Soups",
+        "time": "30",
+        "servings": "4",
+        "imageName": "turkish-red-lentil-soup",
+        "image": "",
+        "ingredients": [
+            {
+                "content": "RedLentils",
+                "measurement": "cups",
+                "value": 1
+            },{
+                "content": "Carrots",
+                "measurement": "pcs",
+                "value": 1
+            },{
+                "content": "Onions",
+                "measurement": "pcs",
+                "value": 1
+            },{
+                "content": "Garlic",
+                "measurement": "sl",
+                "value": 1
+            },{
+                "content": "TomatoConcentrate",
+                "measurement": "tbsp",
+                "value": 2
+            },{
+                "content": "Bouillon",
+                "measurement": "tsp",
+                "value": 2
+            },{
+                "content": "Cumin",
+                "measurement": "tsp",
+                "value": 1
+            },{
+                "content": "OliveOil",
+                "measurement": "ml",
+                "value": 50
+            },{
+                "content": "Lemons",
+                "measurement": "pcs",
+                "value": 1
+            },{
+                "content": "Parsley",
+                "measurement": "pcs",
+                "value": 1
+            },{
+                "content": "Salt",
+                "measurement": "mg",
+                "value": 1
+            }
+        ],
+        "steps": [
+            "Cut the peeled carrot, onion and garlic into cubes. Heat the olive oil in a multicooker or saucepan, salt and fry them until soft.",
+            "Add the tomato concentrate, the pre-washed red lentils, the stock, the crushed cumin and salt.",
+            "Close the multicooker and cook for 12 minutes on a 40 kilo pan or about 20 minutes if using a saucepan.",
+            "Transfer the finished soup to a blender and blend. Serve with sliced lemon, chopped fresh parsley and a drizzle of olive oil."
         ]
     }
 ]
