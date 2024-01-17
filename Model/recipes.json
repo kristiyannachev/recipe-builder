@@ -462,5 +462,227 @@
             "Close the multicooker and cook for 12 minutes on a 40 kilo pan or about 20 minutes if using a saucepan.",
             "Transfer the finished soup to a blender and blend. Serve with sliced lemon, chopped fresh parsley and a drizzle of olive oil."
         ]
+    },
+    {
+        "title": "Classical pancakes",
+        "author": "Kris",
+        "category": "Breakfast",
+        "time": "45",
+        "servings": "5",
+        "imageName": "pancakes",
+        "image": "",
+        "ingredients": [
+            {
+                "content": "Eggs",
+                "measurement": "pcs",
+                "value": 3
+            },{
+                "content": "Milk",
+                "measurement": "ml",
+                "value": 400
+            },{
+                "content": "Flour",
+                "measurement": "cups",
+                "value": 2
+            },{
+                "content": "Salt",
+                "measurement": "mg",
+                "value": 1
+            },{
+                "content": "Oil",
+                "measurement": "tbsp",
+                "value": 3
+            },{
+                "content": "Vanilla",
+                "measurement": "tbsp",
+                "value": 1
+            },{
+                "content": "BakingPowder",
+                "measurement": "tbsp",
+                "value": 1
+            }
+        ],
+        "steps": [
+            "In a deep bowl break the eggs. Beat with the salt and vanilla.",
+            "Add the milk with stirring.",
+            "Gradually add the flour mixed with baking powder. Stir until the mixture is homogeneous.",
+            "Add the oil.",
+            "Heat the pan and put very little oil. Put less than 1 ladle of the mixture and cook until the edges separate. Flip and cook gently on the other side."
+        ]
+    },
+    {
+        "title": "Belgian waffles",
+        "author": "Iliyan",
+        "category": "Breakfast",
+        "time": "75",
+        "servings": "7",
+        "imageName": "belgian-waffles",
+        "image": "",
+        "ingredients": [
+            {
+                "content": "Flour",
+                "measurement": "cups",
+                "value": 2
+            },{
+                "content": "Sugar",
+                "measurement": "gr",
+                "value": 165
+            },{
+                "content": "BakingPowder",
+                "measurement": "tbsp",
+                "value": 3
+            },{
+                "content": "Eggs",
+                "measurement": "pcs",
+                "value": 3
+            },{
+                "content": "Milk",
+                "measurement": "gr",
+                "value": 330
+            },{
+                "content": "Butter",
+                "measurement": "cups",
+                "value": 1
+            },{
+                "content": "Vanilla",
+                "measurement": "tsp",
+                "value": 1
+            },{
+                "content": "Blueberries",
+                "measurement": "cups",
+                "value": 1
+            }
+        ],
+        "steps": [
+            "Мelt the butter in a water bath and leave to rest briefly in the fridge.",
+            "In a bowl, combine flour, sugar and baking powder.",
+            "In another bowl, lightly beat egg yolks.",
+            "Add milk, butter and vanilla and mix well.",
+            "Stir into dry ingredients just until combined.",
+            "Beat egg whites until stiff peaks form, fold into batter.",
+            "Bake in a preheated waffle iron accoring to manufacturer's directions until golden brown.",
+            "Serve with some berries or syrop."
+        ]
+    },
+    {
+        "title": "Quesadilla with poached egg",
+        "author": "Andre Tokev",
+        "category": "Breakfast",
+        "time": "45",
+        "servings": "2",
+        "imageName": "quesadilla-poached-egg",
+        "image": "",
+        "ingredients": [
+            {
+                "content": "Flatbread",
+                "measurement": "pcs",
+                "value": 2
+            }, {
+                "content": "Eggs",
+                "measurement": "pcs",
+                "value": 2
+            }, {
+                "content": "Mozzarella",
+                "measurement": "gr",
+                "value": 200
+            }, {
+                "content": "Tomatoes",
+                "measurement": "gr",
+                "value": 100
+            }, {
+                "content": "Shives",
+                "measurement": "pcs",
+                "value": 2
+            }, {
+                "content": "Basil",
+                "measurement": "pcs",
+                "value": 1
+            }, {
+                "content": "Avocados",
+                "measurement": "pcs",
+                "value": 1
+            }, {
+                "content": "OliveOil",
+                "measurement": "ml",
+                "value": 50
+            }, {
+                "content": "Lime",
+                "measurement": "pcs",
+                "value": 1
+                
+            }, {
+                "content": "Vinegar",
+                "measurement": "tbsp",
+                "value": 3
+            }, {
+                "content": "Salt",
+                "measurement": "mg",
+                "value": 1
+            }
+        ],
+        "steps": [
+            "Slice the mozzarella and tomatoes and arrange them on the flatbread.",
+            "Chop the basil and chives and mix them together. Put them on top of the quesadilla.",
+            "Heat a pan and put olive oil in it. Fry the quesadilla from both sides.",
+            "Cut the avocado into cubes and season with lime, olive oil and salt.",
+            "Heat water and add the vinegar. Water should not boil but only simmer.",
+            "Put the egg in a small bowl. Stir the water like a whirlpool. Pour the egg into the centre and cook for 3 minutes.",
+            "Serve the quesadilla cut in half with the avocado, warmed tomatoes and the egg sprinkled with paprika on top."
+        ]
+    },
+    {
+        "title": "Fluffy pancakes",
+        "author": "Rowe",
+        "category": "Breakfast",
+        "time": "45",
+        "servings": "4",
+        "imageName": "fluffy-pancakes",
+        "image": "",
+        "ingredients": [
+            {
+                "content": "Eggs",
+                "measurement": "pcs",
+                "value": 4
+            },
+            {
+                "content": "Milk",
+                "measurement": "ml",
+                "value": 150
+            },
+            {
+                "content": "Ricotta",
+                "measurement": "gr",
+                "value": 300
+            },
+            {
+                "content": "Flour",
+                "measurement": "gr",
+                "value": 180
+            },
+            {
+                "content": "BakingPowder",
+                "measurement": "tsp",
+                "value": 1
+            },
+            {
+                "content": "Oil",
+                "measurement": "ml",
+                "value": 50
+            },
+            {
+                "content": "Butter",
+                "measurement": "tbsp",
+                "value": 2
+            }
+        ],
+        "steps": [
+            "Beat the egg whites into foam.",
+            "Sift the flour. Mix with baking powder.",
+            "Place the ricotta, milk and egg yolks in a bowl. Whip with a whisk.",
+            "Mix dry ingredients slowly into the baffer, again with a whisk and then with a spoon.",
+            "Add the beaten egg whites to the baffer, mix very slowly with a spoon.",
+            "Heat a pan on average temperature, then add butter or/and oil. Put 2 spoons of batter for each pancake. Make space between each pancake.",
+            "When bubbles appear flip the pancake."
+        ]
     }
 ]
