@@ -1,7 +1,7 @@
 [
     {
         "title": "Spinach lasagne",
-        "author": "StoyanLora",
+        "author": "Stoyan & Lora",
         "category": "Vegetarian",
         "time": "100",
         "servings": "8",
@@ -96,7 +96,7 @@
     },
     {
         "title": "Chicken in bacon",
-        "author": "StoyanLora",
+        "author": "Stoyan & Lora",
         "category": "Chicken",
         "time": "35",
         "servings": "6",
@@ -403,7 +403,7 @@
     },
     {
         "title": "Turkish red lentil soup",
-        "author": "StoyanLora",
+        "author": "Stoyan & Lora",
         "category": "Soups",
         "time": "30",
         "servings": "4",
@@ -414,43 +414,53 @@
                 "content": "RedLentils",
                 "measurement": "cups",
                 "value": 1
-            },{
+            },
+            {
                 "content": "Carrots",
                 "measurement": "pcs",
                 "value": 1
-            },{
+            },
+            {
                 "content": "Onions",
                 "measurement": "pcs",
                 "value": 1
-            },{
+            },
+            {
                 "content": "Garlic",
                 "measurement": "sl",
                 "value": 1
-            },{
+            },
+            {
                 "content": "TomatoConcentrate",
                 "measurement": "tbsp",
                 "value": 2
-            },{
+            },
+            {
                 "content": "Bouillon",
                 "measurement": "tsp",
                 "value": 2
-            },{
+            },
+            {
                 "content": "Cumin",
                 "measurement": "tsp",
                 "value": 1
-            },{
+            },
+            {
                 "content": "OliveOil",
                 "measurement": "ml",
                 "value": 50
-            },{
+            },
+            {
                 "content": "Lemons",
                 "measurement": "pcs",
                 "value": 1
-            },{
+            },
+            {
                 "content": "Parsley",
                 "measurement": "pcs",
                 "value": 1
-            },{
+            },
+            {
                 "content": "Salt",
                 "measurement": "mg",
                 "value": 1
@@ -465,7 +475,7 @@
     },
     {
         "title": "Classical pancakes",
-        "author": "Kris",
+        "author": "Nati & Kris",
         "category": "Breakfast",
         "time": "45",
         "servings": "5",
@@ -476,27 +486,33 @@
                 "content": "Eggs",
                 "measurement": "pcs",
                 "value": 3
-            },{
+            },
+            {
                 "content": "Milk",
                 "measurement": "ml",
                 "value": 400
-            },{
+            },
+            {
                 "content": "Flour",
                 "measurement": "cups",
                 "value": 2
-            },{
+            },
+            {
                 "content": "Salt",
                 "measurement": "mg",
                 "value": 1
-            },{
+            },
+            {
                 "content": "Oil",
                 "measurement": "tbsp",
                 "value": 3
-            },{
+            },
+            {
                 "content": "Vanilla",
                 "measurement": "tbsp",
                 "value": 1
-            },{
+            },
+            {
                 "content": "BakingPowder",
                 "measurement": "tbsp",
                 "value": 1
@@ -523,31 +539,38 @@
                 "content": "Flour",
                 "measurement": "cups",
                 "value": 2
-            },{
+            },
+            {
                 "content": "Sugar",
                 "measurement": "gr",
                 "value": 165
-            },{
+            },
+            {
                 "content": "BakingPowder",
                 "measurement": "tbsp",
                 "value": 3
-            },{
+            },
+            {
                 "content": "Eggs",
                 "measurement": "pcs",
                 "value": 3
-            },{
+            },
+            {
                 "content": "Milk",
                 "measurement": "gr",
                 "value": 330
-            },{
+            },
+            {
                 "content": "Butter",
                 "measurement": "cups",
                 "value": 1
-            },{
+            },
+            {
                 "content": "Vanilla",
                 "measurement": "tsp",
                 "value": 1
-            },{
+            },
+            {
                 "content": "Blueberries",
                 "measurement": "cups",
                 "value": 1
@@ -577,44 +600,54 @@
                 "content": "Flatbread",
                 "measurement": "pcs",
                 "value": 2
-            }, {
+            },
+            {
                 "content": "Eggs",
                 "measurement": "pcs",
                 "value": 2
-            }, {
+            },
+            {
                 "content": "Mozzarella",
                 "measurement": "gr",
                 "value": 200
-            }, {
+            },
+            {
                 "content": "Tomatoes",
                 "measurement": "gr",
                 "value": 100
-            }, {
+            },
+            {
                 "content": "Shives",
                 "measurement": "pcs",
                 "value": 2
-            }, {
+            },
+            {
                 "content": "Basil",
                 "measurement": "pcs",
                 "value": 1
-            }, {
+            },
+            {
                 "content": "Avocados",
                 "measurement": "pcs",
                 "value": 1
-            }, {
+            },
+            {
                 "content": "OliveOil",
                 "measurement": "ml",
                 "value": 50
-            }, {
+            },
+            {
                 "content": "Lime",
                 "measurement": "pcs",
                 "value": 1
                 
-            }, {
+            },
+            {
                 "content": "Vinegar",
                 "measurement": "tbsp",
                 "value": 3
-            }, {
+            },
+            {
                 "content": "Salt",
                 "measurement": "mg",
                 "value": 1
@@ -683,6 +716,555 @@
             "Add the beaten egg whites to the baffer, mix very slowly with a spoon.",
             "Heat a pan on average temperature, then add butter or/and oil. Put 2 spoons of batter for each pancake. Make space between each pancake.",
             "When bubbles appear flip the pancake."
+        ]
+    },
+    {
+        "title": "Stefani roll",
+        "author": "Nati",
+        "category": "Meat",
+        "time": "80",
+        "servings": "8",
+        "imageName": "stephanie-roll",
+        "image": "",
+        "ingredients": [
+            {
+                "content": "Mince",
+                "measurement": "kg",
+                "value": 1
+            },
+            {
+                "content": "Bread",
+                "measurement": "sl",
+                "value": 2
+            },
+            {
+                "content": "Eggs",
+                "measurement": "pcs",
+                "value": 5
+            },
+            {
+                "content": "Carrots",
+                "measurement": "pcs",
+                "value": 3
+            },
+            {
+                "content": "Pickles",
+                "measurement": "pcs",
+                "value": 4
+            },
+            {
+                "content": "Onions",
+                "measurement": "pcs",
+                "value": 2
+            },
+            {
+                "content": "Savory",
+                "measurement": "tsp",
+                "value": 1
+            },
+            {
+                "content": "Salt",
+                "measurement": "tsp",
+                "value": 1
+            },
+            {
+                "content": "Cumin",
+                "measurement": "tsp",
+                "value": 1
+            },
+            {
+                "content": "Parsley",
+                "measurement": "sl",
+                "value": 3
+            }
+        ],
+        "steps": [
+            "The first and most essential step of the recipe for roll Stefani is the preparation of the products. Boil the carrots for about 10 minutes, and in the meantime prepare the minced meat. You can use either pork or veal mince to make a stefani roll, and it is best to use a mixture of minces. While you are preparing the mince, boil three of the eggs. Add the salt and spices, and two raw eggs. You soak the slices in water and once they are completely soft you crumble them and add them to the mince as well. You grate the onion, chop the parsley very finely and add them to the bowl. And you start mixing with your hands. Knead thoroughly to distribute all the ingredients evenly. You leave the mince aside.",
+            "Cut the cooked carrots and cucumbers into strips. Peel the eggs and cut them into quarters. The mince should be spread out in a rectangular shape about 1 cm thick and approximately the width of the baking tray in which you will bake the roll (for example 35 cm by 25 cm). At the top of the wide side of the minced 'marsh', arrange a row of carrots, underneath a row of pickled cucumbers and finally a row of boiled and quartered eggs. Don't try to roll the roll with your hands, as the mince 'swamp' will break. Therefore, grasp the towel at the top end where the vegetables are arranged and, in one movement, 'tuck' and roll down. Repeat the movement until you have rolled the whole roll. Finally, press both ends of the roll to \"seal\" and keep the filling from coming out when baking.",
+            "You need a large baking tray to bake a Stephanie roll, it is best to use the oven trays as the roll is quite long. Place baking paper in the tray (this will save you the effort of washing the tray later) and place the roll on top. Bake the stefani roll in a preheated oven at 180 degrees for 40-45 minutes."
+        ]
+    },
+    {
+        "title": "Spaghetti chicken",
+        "author": "Nati & Kris",
+        "category": "Chicken",
+        "time": "45",
+        "servings": "4",
+        "imageName": "spaghetti-chicken",
+        "image": "",
+        "ingredients": [
+            {
+                "content": "Pasta",
+                "measurement": "gr",
+                "value": 500
+            },
+            {
+                "content": "Chicken",
+                "measurement": "gr",
+                "value": 800
+            },
+            {
+                "content": "Onions",
+                "measurement": "pcs",
+                "value": 1
+            },
+            {
+                "content": "CookingCream",
+                "measurement": "pcs",
+                "value": 2
+            },
+            {
+                "content": "Corn",
+                "measurement": "pcs",
+                "value": 1
+            },
+            {
+                "content": "Bacon",
+                "measurement": "pcs",
+                "value": 1
+            },
+            {
+                "content": "Dill",
+                "measurement": "pcs",
+                "value": 1
+            },
+            {
+                "content": "Cheese",
+                "measurement": "gr",
+                "value": 200
+            },
+            {
+                "content": "Salt",
+                "measurement": "mg",
+                "value": 1
+            }
+        ],
+        "steps": [
+            "Cut the onion into cubes and put in a pan with hot oil.",
+            "Add the bacon and the seasoned chicken to the mix.",
+            "Put the dried corn and the sliced dill. Pour the cooking cream and cook for a few minutes.",
+            "Meanwhile, cook the spaghetti.",
+            "Serve the spaghetti on a deep plate with the sauce and shredded cheese on top. Enjoy!"
+        ]
+    },
+    {
+        "title": "Chicken popcorn",
+        "author": "Stoyan & Lora",
+        "category": "Chicken",
+        "time": "50",
+        "servings": "4",
+        "imageName": "chicken-popcorn",
+        "image": "",
+        "ingredients": [
+            {
+                "content": "Chicken",
+                "measurement": "gr",
+                "value": 1000
+            },
+            {
+                "content": "Bread",
+                "measurement": "gr",
+                "value": 800
+            },
+            {
+                "content": "Oregano",
+                "measurement": "tsp",
+                "value": 2
+            },
+            {
+                "content": "RedPepperPowder",
+                "measurement": "tsp",
+                "value": 2
+            },
+            {
+                "content": "Garlic",
+                "measurement": "tsp",
+                "value": 1
+            },
+            {
+                "content": "Thyme",
+                "measurement": "tsp",
+                "value": 1
+            },
+            {
+                "content": "OliveOil",
+                "measurement": "tbsp",
+                "value": 4
+            },
+            {
+                "content": "Eggs",
+                "measurement": "pcs",
+                "value": 5
+            },
+            {
+                "content": "Parmesan",
+                "measurement": "gr",
+                "value": 120
+            },
+            {
+                "content": "Flour",
+                "measurement": "gr",
+                "value": 350
+            },
+            {
+                "content": "Salt",
+                "measurement": "mg",
+                "value": 2
+            },
+            {
+                "content": "Yoghurt",
+                "measurement": "gr",
+                "value": 400
+            },
+            {
+                "content": "Mustard",
+                "measurement": "tbsp",
+                "value": 2
+            },
+            {
+                "content": "Honey",
+                "measurement": "tsp",
+                "value": 2
+            },
+            {
+                "content": "Garlic",
+                "measurement": "sl",
+                "value": 2
+            }
+            
+        ],
+        "steps": [
+            "Cut the meat into cubes and season it with oregano, dried garlic, paprika, thyme, salt and olive oil. Refrigerate for 30 minutes.",
+            "Put the bread in a blender and grind it into crumbs. Pour them into a shallow baking dish and bake them in the oven at 180 degrees for about 8 minutes. Remove and cool. Mix the crumbs with the grated Parmesan.",
+            "Roll the chicken in flour, dip in beaten eggs and coat with breadcrumbs and parmesan. Cook the bites in an airfryer for 10-15 minutes or fry them in a pan in an oil bath.",
+            "Make the sauce by mixing the yoghurt with the crushed garlic, honey and mustard. Serve the bites with the sauce and mixed salad greens."
+        ]
+    },
+    {
+        "title": "Roasted chicken chimichanga",
+        "author": "Stoyan & Lora",
+        "category": "Chicken",
+        "time": "90",
+        "servings": "6",
+        "imageName": "roasted-chicken-chimichanga",
+        "image": "",
+        "ingredients": [
+            {
+                "content": "Chicken",
+                "measurement": "gr",
+                "value": 800
+            },
+            {
+                "content": "Cheddar",
+                "measurement": "gr",
+                "value": 240
+            },
+            {
+                "content": "SourCream",
+                "measurement": "gr",
+                "value": 160
+            },
+            {
+                "content": "Butter",
+                "measurement": "gr",
+                "value": 100
+            },
+            {
+                "content": "Oil",
+                "measurement": "ml",
+                "value": 100
+            },
+            {
+                "content": "Flatbread",
+                "measurement": "pcs",
+                "value": 8
+            },
+            {
+                "content": "Garlic",
+                "measurement": "sl",
+                "value": 4
+            },
+            {
+                "content": "Onions",
+                "measurement": "pcs",
+                "value": 2
+            },
+            {
+                "content": "Tomatoes",
+                "measurement": "pcs",
+                "value": 2
+            },
+            {
+                "content": "Cumin",
+                "measurement": "tsp",
+                "value": 2
+            },
+            {
+                "content": "RedPepperPowder",
+                "measurement": "tsp",
+                "value": 1
+            },
+            {
+                "content": "Salt",
+                "measurement": "mg",
+                "value": 1
+            },
+            {
+                "content": "SourCream",
+                "measurement": "gr",
+                "value": 400
+            },
+            {
+                "content": "Avocados",
+                "measurement": "pcs",
+                "value": 2
+            },
+            {
+                "content": "Tomatoes",
+                "measurement": "pcs",
+                "value": 3
+            },
+            {
+                "content": "Lime",
+                "measurement": "pcs",
+                "value": 1
+            },
+            {
+                "content": "Coriander",
+                "measurement": "pcs",
+                "value": 1
+            },
+            {
+                "content": "Shives",
+                "measurement": "pcs",
+                "value": 1
+            },
+            {
+                "content": "Garlic",
+                "measurement": "tsp",
+                "value": 1
+            },
+            {
+                "content": "Salt",
+                "measurement": "mg",
+                "value": 1
+            }
+        ],
+        "steps": [
+            "Cut the chicken into thin pieces and fry in the hot oil along with the chopped onion and garlic.",
+            "Add the diced tomato and chopped chilli. Season with cumin, smoked paprika, chili powder, salt and pepper, and after 1-2 minutes pull from the heat.",
+            "Mix the finished stuffing with the grated Cheddar cheese and the sour cream.",
+            "Spread the tortillas with melted butter.",
+            "In the middle of each put the filling and close like packets.",
+            "Arrange in a non-stick pan. Brush the top with butter. Bake in a preheated oven at 180 degrees with a fan until ready - about 15 minutes.",
+            "Mash the avocado and season with the garlic, salt and lime juice. Dice the tomatoes and mix with the chopped onion, coriander and chilli.Season with salt and pepper.",
+            "Each serving of chimichanga is served with avocado, tomatoes, sour cream and optional shredded Cheddar cheese."
+        ]
+    },
+    {
+        "title": "Butter chicken masala",
+        "author": "Stoyan & Lora",
+        "category": "Chicken",
+        "time": "120",
+        "servings": "6",
+        "imageName": "butter-chicken-masala",
+        "image": "",
+        "ingredients": [
+            {
+                "content": "Chicken",
+                "measurement": "gr",
+                "value": 800
+            },
+            {
+                "content": "Yoghurt",
+                "measurement": "gr",
+                "value": 200
+            },
+            {
+                "content": "Ginger",
+                "measurement": "gr",
+                "value": 40
+            },
+            {
+                "content": "Garlic",
+                "measurement": "sl",
+                "value": 2
+            },
+            {
+                "content": "Lemons",
+                "measurement": "ml",
+                "value": 30
+            },
+            {
+                "content": "GaramMasala",
+                "measurement": "tsp",
+                "value": 1
+            },
+            {
+                "content": "RedPepperPowder",
+                "measurement": "tsp",
+                "value": 1
+            },
+            {
+                "content": "Curcuma",
+                "measurement": "gr",
+                "value": 2
+            },
+            {
+                "content": "Cinnamon",
+                "measurement": "gr",
+                "value": 1
+            },
+            {
+                "content": "Salt",
+                "measurement": "mg",
+                "value": 1
+            },
+            {
+                "content": "Oil",
+                "measurement": "gr",
+                "value": 20
+            },
+            {
+                "content": "CannedTomatoes",
+                "measurement": "gr",
+                "value": 400
+            },
+            {
+                "content": "Cashew",
+                "measurement": "gr",
+                "value": 30
+            },
+            {
+                "content": "CookingCream",
+                "measurement": "ml",
+                "value": 150
+            },
+            {
+                "content": "Butter",
+                "measurement": "tbsp",
+                "value": 3
+            },
+            {
+                "content": "Garlic",
+                "measurement": "sl",
+                "value": 3
+            },
+            {
+                "content": "TomatoConcentrate",
+                "measurement": "tbsp",
+                "value": 3
+            },
+            {
+                "content": "GaramMasala",
+                "measurement": "tsp",
+                "value": 1
+            },
+            {
+                "content": "RedPepperPowder",
+                "measurement": "tsp",
+                "value": 1
+            },
+            {
+                "content": "Salt",
+                "measurement": "mg",
+                "value": 1
+            },
+            {
+                "content": "Rice",
+                "measurement": "gr",
+                "value": 200
+            },
+            {
+                "content": "Coriander",
+                "measurement": "pcs",
+                "value": 1
+            }
+        ],
+        "steps": [
+            "Blend the garlic cloves and ginger with the lemon juice, yogurt, garam masala, red pepper, curcuma, cinnamon and salt to taste.",
+            "Mix the meat with the mixture and leave to marinate overnight. It is then removed from the marinade and cooked in an oiled grill pan on both sides - until half done.",
+            "Remove and cut into cubes.",
+            "Chop the garlic for the sauce and fry in heated oil. Sprinkle the garam masala, red pepper and cashews. Stir.",
+            "Add the tomato concentrate, the blended tomatoes and season with salt.",
+            "Pour 200 ml of water and boil the sauce for 15 minutes over low heat. Blend and strain.",
+            "Put back on the heat and stir in the meat.",
+            "Pour the cream. The dish is simmered for 10 minutes and salted.",
+            "Serve with rice cooked in water with a little salt and chopped coriander."
+        ]
+    },
+    {
+        "title": "Mustard Chicken",
+        "author": "Beni",
+        "category": "Chicken",
+        "time": "120",
+        "servings": "4",
+        "imageName": "mustard-chicken",
+        "image": "",
+        "ingredients": [
+            {
+                "content": "Chicken",
+                "measurement": "gr",
+                "value": 800
+            },
+            {
+                "content": "Mustard",
+                "measurement": "gr",
+                "value": 100
+            },
+            {
+                "content": "Salt",
+                "measurement": "gr",
+                "value": 2
+            },
+            {
+                "content": "Onions",
+                "measurement": "pcs",
+                "value": 1
+            },
+            {
+                "content": "Thyme",
+                "measurement": "tsp",
+                "value": 1
+            },
+            {
+                "content": "WhiteWine",
+                "measurement": "ml",
+                "value": 200
+            },
+            {
+                "content": "SourCream",
+                "measurement": "tbsp",
+                "value": 3
+            },
+            {
+                "content": "Oil",
+                "measurement": "ml",
+                "value": 30
+            },
+            {
+                "content": "Butter",
+                "measurement": "gr",
+                "value": 30
+            },
+            {
+                "content": "Rice",
+                "measurement": "cups",
+                "value": 1
+            }
+        ],
+        "steps": [
+            "I cleaned, washed, dried and rubbed the thighs with a mixture of 80 g of the mustard, mixed with ground pepper and salt. I put them in a suitable container, covered with a piece of cling film for fresh storage and left in the fridge overnight. In the original recipe, they stand for 1 hour.",
+            "In a wide and deep frying pan I heated 2 tablespoons of butter and 1 tablespoon of oil and fried the chopped onion, salting it lightly and adding the thyme. When they got an appetizing tan, I removed them to a plate.",
+            "I added just a little more oil to the pan and put the thighs in with the mustard on them. I fried them on both sides until nicely browned. Even though my pan is ceramic, some of the mixture stuck, which is not a problem.",
+            "The finished sealed legs I transferred to the plate with the onions and thyme, and in the pan I put the wine and 150 ml. water. I brought to the boil, using a silicone spatula to help separate any chicken or mustard stuck to the bottom.",
+            "I turned the heat down to 3 from 6 on my stove and returned the thighs, onions and thyme.",
+            "Since I don't have a lid for this pan, I covered it with a piece of aluminum foil and cooked for a little over 1 hour, or until the chicken was completely done. During cooking, I turned the thighs 4-5 times to cook evenly. If there is almost no sauce left in the pan, a little more hot water can be added.",
+            "I mixed the 20 g of mustard with the sour cream and 2 tablespoons of lukewarm water. To this mixture I added a little of the sauce to the dish and when it was homogenised I returned it to the pan, not basting the meat but mixing it with the sauce. I brought it to a boil and turned off the heat, allowing the dish to cook a little more. It shouldn't cook more than 2-3 minutes because the sauce will thicken.",
+            "Meanwhile I prepared the rice.",
+            "I washed the rice and drained it in a sieve colander. I boiled 900 ml. water. In a medium saucepan I heated 2 tbsp oil and 1 tbsp butter. I added the rice and salt to taste, stirred and fried until the grains visibly began to seal. When that happened, I removed the pot from the heat and added all the boiling water. I stirred, returned it to the stove, and turned the heat down to 3 from 6.",
+            "I cooked without a lid until the rice had completely absorbed the liquid, stirring occasionally. When the liquid was absorbed, I removed the pot from the heat, covered it with two layers of kitchen paper and put the lid on. This steams the rice and the paper absorbs any excess liquid. A cotton cloth can also be used for this purpose.",
+            "I arranged the rice on the plates, which I had previously placed and sealed well in a buttered glass. Then I added the thighs and poured the sauce over them. I finished with chopped parsley and a sprig of thyme on top of the rice. Bon appetit!"
         ]
     }
 ]
