@@ -273,7 +273,7 @@
             {
                 "content": "BakingSoda",
                 "measurement": "gr",
-                "value": 2
+                "value": 1
             },
             {
                 "content": "Raisins",
@@ -457,8 +457,8 @@
             },
             {
                 "content": "Parsley",
-                "measurement": "pcs",
-                "value": 1
+                "measurement": "sl",
+                "value": 3
             },
             {
                 "content": "Salt",
@@ -618,7 +618,7 @@
             },
             {
                 "content": "Shives",
-                "measurement": "pcs",
+                "measurement": "sl",
                 "value": 2
             },
             {
@@ -750,7 +750,7 @@
             {
                 "content": "Pickles",
                 "measurement": "pcs",
-                "value": 4
+                "value": 6
             },
             {
                 "content": "Onions",
@@ -1031,13 +1031,13 @@
             },
             {
                 "content": "Coriander",
-                "measurement": "pcs",
-                "value": 1
+                "measurement": "sl",
+                "value": 4
             },
             {
                 "content": "Shives",
-                "measurement": "pcs",
-                "value": 1
+                "measurement": "sl",
+                "value": 3
             },
             {
                 "content": "Garlic",
