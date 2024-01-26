@@ -24,7 +24,7 @@ struct Recipe: Codable, Identifiable {
         case soups = "Soups"
         case chicken = "Chicken"
         case pork = "Pork"
-        case otherMeat = "Meat"
+        case otherMeat = "Other Meat & Fish"
         case vegetarian = "Vegetarian"
         case cakes = "Cakes"
         case sweets = "Sweets"

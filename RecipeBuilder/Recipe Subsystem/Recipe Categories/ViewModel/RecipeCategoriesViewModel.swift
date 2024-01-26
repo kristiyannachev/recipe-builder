@@ -29,7 +29,7 @@ class RecipeCategoriesViewModel: ObservableObject {
         case .pork:
             return "🐖"
         case .otherMeat:
-            return "🐂🦃🐟"
+            return "🐂🐟"
         case .vegetarian:
             return "🧀🥬"
         case .cakes:
