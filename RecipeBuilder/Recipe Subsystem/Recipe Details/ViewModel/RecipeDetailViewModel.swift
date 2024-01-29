@@ -20,6 +20,8 @@ class RecipeDetailViewModel: ObservableObject {
     let spacing: CGFloat = AppConstants.RecipeDetail.spacing
     // Recipe info
     let recipeInfoHeadline = AppStrings.RecipeDetail.recipeInfoHeadline
+    let addToCartText = AppStrings.RecipeDetail.addToCartText
+    let addToCartImageName = AppStrings.RecipeDetail.addToCartImageName
     var authorText: String {
         recipe.author
     }
@@ -81,5 +83,9 @@ class RecipeDetailViewModel: ObservableObject {
             return Image(recipe.imageName)
         }
         return Image(uiImage: UIImage(data: recipe.image) ?? UIImage())
+    }
+    
+    func addRecipeItemsToCart() {
+        model.addShoppingCartItems(itemsToAdd: recipe.ingredients)
     }
 }

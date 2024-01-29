@@ -31,6 +31,8 @@ struct AppStrings {
     
     enum RecipeDetail {
         static let recipeInfoHeadline = "Recipe info"
+        static let addToCartText = "Add to cart"
+        static let addToCartImageName = "cart.badge.plus"
         static let authorImageName = "person"
         static let categoryImageName = "folder"
         static let restTimeText = "minutes"
@@ -77,5 +79,10 @@ struct AppStrings {
         static let addStepTitle = "Add"
         static let editStepTitle = "Edit"
         static let restStepTitle = "step"
+    }
+    
+    enum ShoppingCart {
+        static let navigationTitle = "Shopping Cart"
+        static let shoppingCartItemImageName = "circle"
     }
 }

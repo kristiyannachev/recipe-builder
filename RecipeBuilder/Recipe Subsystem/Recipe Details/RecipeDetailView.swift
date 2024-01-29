@@ -30,12 +30,12 @@ struct RecipeDetailView: View {
                 VStack(alignment: .leading, spacing: viewModel.spacing) {
                     Text(viewModel.recipeInfoHeadline)
                         .sectionHeadline()
-                    HStack() {
+                    HStack {
                         Label(viewModel.authorText, systemImage: viewModel.authorImageName)
                         Spacer()
                         Label(viewModel.categoryText, systemImage: viewModel.categoryImageName)
                     }
-                    HStack() {
+                    HStack {
                         Label(viewModel.timeText, systemImage: viewModel.timeImageName)
                         Spacer()
                         Label(viewModel.servingsText, systemImage: viewModel.servingsImageName)
@@ -46,8 +46,15 @@ struct RecipeDetailView: View {
                 Divider()
                 
                 VStack(alignment: .leading, spacing: viewModel.spacing) {
-                    Text(viewModel.ingredientsInfoHeadline)
-                        .sectionHeadline()
+                    HStack {
+                        Text(viewModel.ingredientsInfoHeadline)
+                            .sectionHeadline()
+                        Spacer()
+                        Button("") {
+                            viewModel.addRecipeItemsToCart()
+                        }
+                        .buttonStyle(AddToCartButtonStyle())
+                    }
                     ForEach(viewModel.recipe.ingredients) { ingredient in
                         HStack {
                             Text(viewModel.getIngredientText(ingredient))

@@ -11,7 +11,16 @@ struct MainView: View {
     @EnvironmentObject private var model: Model
 
     var body: some View {
-        RecipeCategoriesView(model)
+        TabView {
+            RecipeCategoriesView(model)
+                .tabItem {
+                    Label("Recipes", systemImage: "book")
+                }
+            ShoppingCartView(model)
+                .tabItem {
+                    Label("Shopping Cart", systemImage: "cart")
+                }
+        }
     }
 }
 
