@@ -9,9 +9,9 @@ import Foundation
 
 class Model: ObservableObject {
     @Published var recipes: [Recipe] = []
-    @Published var shoppingCartItems: [Ingredient] = []
+    @Published var shoppingCartItems: [ShoppingCartItem] = []
     
-    init(recipes: [Recipe] = [], shoppingCartItems: [Ingredient] = []) {
+    init(recipes: [Recipe] = [], shoppingCartItems: [ShoppingCartItem] = []) {
         self.recipes = recipes
         self.shoppingCartItems = shoppingCartItems
     }
@@ -24,11 +24,15 @@ class Model: ObservableObject {
         recipes.filter{ $0.category == category }
     }
     
-    func addShoppingCartItems(itemsToAdd items: [Ingredient]) {
+    func addShoppingCartIngredients(ingredientsToAdd ingredients: [Ingredient]) {
+        shoppingCartItems.append(contentsOf: ingredients.map{ ShoppingCartItem(ingredient: $0) })
+    }
+    
+    func addShoppingCartItems(itemsToAdd items: [ShoppingCartItem]) {
         shoppingCartItems.append(contentsOf: items)
     }
     
-    func deleteShoppingCartItem(item: Ingredient) {
+    func deleteShoppingCartItem(item: ShoppingCartItem) {
         shoppingCartItems.removeAll{ $0.id == item.id }
     }
 }

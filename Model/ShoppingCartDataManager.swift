@@ -8,7 +8,7 @@
 import Foundation
 
 struct ShoppingCartDataManager {
-    func load(completion: @escaping ([Ingredient]) -> Void) {
+    func load(completion: @escaping ([ShoppingCartItem]) -> Void) {
         DispatchQueue.global(qos: .background).async {
             
             // Copy the recipes.json file to the user's documents folder if it's not already there
@@ -27,7 +27,7 @@ struct ShoppingCartDataManager {
             let decoder = JSONDecoder()
             
             // Attempt to decode the JSON document into an array of Recipe instances
-            guard let items = try? decoder.decode([Ingredient].self, from: data) else {
+            guard let items = try? decoder.decode([ShoppingCartItem].self, from: data) else {
                 fatalError("Can't decode saved recipe data")
             }
             
@@ -38,7 +38,7 @@ struct ShoppingCartDataManager {
         }
     }
     
-    func save(items: [Ingredient]) {
+    func save(items: [ShoppingCartItem]) {
         DispatchQueue.global(qos: .background).async {
             // Prepare a JSONEncoder, ensuring that it can successfully re-encode dates from the Swift Date type into text within the resulting JSON representation
             let encoder = JSONEncoder()

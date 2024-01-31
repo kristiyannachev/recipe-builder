@@ -17,16 +17,23 @@ struct ShoppingCartView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(viewModel.shoppingCartItems, id: \.self) { item in
-                    HStack {
-                        Text(viewModel.getShoppingCartItemText(item: item))
-                            .info()
-                        Spacer()
-                        Button("") {
-                            viewModel.deleteItem(item)
+                ForEach(viewModel.shoppingCartItemsPending) { item in
+                    viewModel.getShoppingCartItemView(item: item)
+                        .swipeActions {
+                            Button(viewModel.deleteShoppingCartItemButtonText) {
+                                viewModel.deleteItem(item)
+                            }
+                            .tint(.red)
                         }
-                        .buttonStyle(ShoppingCartItemButtonStyle())
-                    }
+                }
+                ForEach(viewModel.shoppingCartItemsDone) { item in
+                    viewModel.getShoppingCartItemView(item: item)
+                        .swipeActions {
+                            Button(viewModel.deleteShoppingCartItemButtonText) {
+                                viewModel.deleteItem(item)
+                            }
+                            .tint(.red)
+                        }
                 }
             }
             .navigationTitle(viewModel.navigationTitle)

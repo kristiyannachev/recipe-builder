@@ -83,6 +83,8 @@ struct AppStrings {
     
     enum ShoppingCart {
         static let navigationTitle = "Shopping Cart"
-        static let shoppingCartItemImageName = "circle"
+        static let shoppingCartItemPendingImageName = "circle"
+        static let shoppingCartItemDoneImageName = "checkmark.circle.fill"
+        static let deleteShoppingCartItemButtonText = "Delete"
     }
 }

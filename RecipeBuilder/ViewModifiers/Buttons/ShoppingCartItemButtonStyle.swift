@@ -10,9 +10,10 @@ import SwiftUI
 
 struct ShoppingCartItemButtonStyle: ButtonStyle {
     @Environment(\.colorScheme) var colorScheme
+    let isDone: Bool
 
     func makeBody(configuration: Configuration) -> some View {
-        Image(systemName: AppStrings.ShoppingCart.shoppingCartItemImageName)
+        Image(systemName: isDone ? AppStrings.ShoppingCart.shoppingCartItemDoneImageName : AppStrings.ShoppingCart.shoppingCartItemPendingImageName)
             .padding(7)
     }
 }

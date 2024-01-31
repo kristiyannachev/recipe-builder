@@ -11,8 +11,12 @@ import SwiftUI
 class ShoppingCartViewModel: ObservableObject {
     private var model: Model
     let navigationTitle = AppStrings.ShoppingCart.navigationTitle
-    var shoppingCartItems: [Ingredient] {
-        model.shoppingCartItems
+    let deleteShoppingCartItemButtonText = AppStrings.ShoppingCart.deleteShoppingCartItemButtonText
+    var shoppingCartItemsPending: [ShoppingCartItem] {
+        model.shoppingCartItems.filter { $0.state == .pending }
+    }
+    var shoppingCartItemsDone: [ShoppingCartItem] {
+        model.shoppingCartItems.filter { $0.state == .done }
     }
     
     init(_ model: Model) {
@@ -20,11 +24,15 @@ class ShoppingCartViewModel: ObservableObject {
     }
     
     
-    func getShoppingCartItemText(item: Ingredient) -> String {
-        "\(item.content.asReadableString) \(item.content.emoji)   \(item.value) \(item.measurement.rawValue)"
+    func getShoppingCartItemText(item: ShoppingCartItem) -> String {
+        "\(item.ingredient.content.asReadableString) \(item.ingredient.content.emoji)   \(item.ingredient.value) \(item.ingredient.measurement.rawValue)"
     }
     
-    func deleteItem(_ item: Ingredient) {
+    func deleteItem(_ item: ShoppingCartItem) {
         model.deleteShoppingCartItem(item: item)
+    }
+    
+    func getShoppingCartItemView(item: ShoppingCartItem) -> some View {
+        ShoppingCartItemView(model, item: item)
     }
 }

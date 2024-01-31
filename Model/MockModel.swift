@@ -39,8 +39,8 @@ class MockModel: Model {
                               "Preheat the oven to 180 degrees with a fan. Bake the lasagne for 40 minutes. Allow to cool slightly, cut and serve."
                              ])
                   ]
-        let itemOne = Ingredient(content: .butter, measurement: .grams, value: 60)
-        let itemTwo = Ingredient(content: .milk, measurement: .mililiters, value: 550)
+        let itemOne = ShoppingCartItem(ingredient: Ingredient(content: .butter, measurement: .grams, value: 60))
+        let itemTwo = ShoppingCartItem(ingredient: Ingredient(content: .milk, measurement: .mililiters, value: 550))
         let items = [itemOne, itemTwo]
         self.init(recipes: recipes, shoppingCartItems: items)
     }

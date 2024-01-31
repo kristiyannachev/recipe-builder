@@ -86,6 +86,6 @@ class RecipeDetailViewModel: ObservableObject {
     }
     
     func addRecipeItemsToCart() {
-        model.addShoppingCartItems(itemsToAdd: recipe.ingredients)
+        model.addShoppingCartIngredients(ingredientsToAdd: recipe.ingredients)
     }
 }
