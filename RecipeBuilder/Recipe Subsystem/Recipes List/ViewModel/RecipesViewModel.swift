@@ -11,6 +11,7 @@ import SwiftUI
 class RecipesViewModel: ObservableObject {
     private var model: Model
     private var category: Recipe.CategoryValue
+    @Binding var tabSelection: Int
     @Published var showAddView = false
     @Published var recipeAdded = Recipe()
     var navigationTitle: String {
@@ -24,9 +25,10 @@ class RecipesViewModel: ObservableObject {
     }
     
     
-    init(_ model: Model, category: Recipe.CategoryValue) {
+    init(_ model: Model, category: Recipe.CategoryValue, tabSelection: Binding<Int>) {
         self.model = model
         self.category = category
+        self._tabSelection = tabSelection
         self.recipeAdded.category = category
     }
     
@@ -47,6 +49,6 @@ class RecipesViewModel: ObservableObject {
     }
     
     func getRecipeDetailView(recipe: Recipe) -> some View {
-        RecipeDetailView(model, recipe: recipe)
+        RecipeDetailView(model, recipe: recipe, tabSelection: $tabSelection)
     }
 }

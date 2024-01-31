@@ -10,8 +10,8 @@ import SwiftUI
 struct RecipesView: View {
     @ObservedObject var viewModel: RecipesViewModel
     
-    init(_ model: Model, category: Recipe.CategoryValue) {
-        viewModel = RecipesViewModel(model, category: category)
+    init(_ model: Model, category: Recipe.CategoryValue, tabSelection: Binding<Int>) {
+        viewModel = RecipesViewModel(model, category: category, tabSelection: tabSelection)
     }
     
     var body: some View {
@@ -51,15 +51,16 @@ struct RecipesView: View {
 struct RecipesView_Previews: PreviewProvider {
     static var model = MockModel()
     static var category: Recipe.CategoryValue = .other
+    @State static var tabSelection = 1
     
     static var previews: some View {
         Group {
             NavigationView {
-                RecipesView(model, category: category)
+                RecipesView(model, category: category, tabSelection: $tabSelection)
             }
             
             NavigationView {
-                RecipesView(model, category: category)
+                RecipesView(model, category: category, tabSelection: $tabSelection)
                     .preferredColorScheme(.dark)
             }
         }

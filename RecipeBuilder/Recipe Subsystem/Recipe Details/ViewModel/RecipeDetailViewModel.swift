@@ -11,6 +11,7 @@ import SwiftUI
 class RecipeDetailViewModel: ObservableObject {
     private var model: Model
     var recipe: Recipe
+    @Binding var tabSelection: Int
     @Published var showEditView = false
     @Published var recipeEdited = Recipe()
     
@@ -49,9 +50,10 @@ class RecipeDetailViewModel: ObservableObject {
     let saveRecipeText = AppStrings.RecipeDetail.saveRecipeText
     
     
-    init(_ model: Model, recipe: Recipe) {
+    init(_ model: Model, recipe: Recipe, tabSelection: Binding<Int>) {
         self.model = model
         self.recipe = recipe
+        self._tabSelection = tabSelection
     }
     
     
@@ -87,5 +89,6 @@ class RecipeDetailViewModel: ObservableObject {
     
     func addRecipeItemsToCart() {
         model.addShoppingCartIngredients(ingredientsToAdd: recipe.ingredients)
+        self.tabSelection = 2
     }
 }

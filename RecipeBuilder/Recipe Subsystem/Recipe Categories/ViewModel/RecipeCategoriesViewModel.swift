@@ -10,11 +10,13 @@ import SwiftUI
 
 class RecipeCategoriesViewModel: ObservableObject {
     private var model: Model
+    @Binding var tabSelection: Int
     let navigationTitle = AppStrings.Categories.navigationTitle
     
     
-    init(_ model: Model) {
+    init(_ model: Model, tabSelection: Binding<Int>) {
         self.model = model
+        self._tabSelection = tabSelection
     }
     
     
@@ -46,6 +48,6 @@ class RecipeCategoriesViewModel: ObservableObject {
     }
     
     func getRecipesListView(category: Recipe.CategoryValue) -> some View {
-        RecipesView(model, category: category)
+        RecipesView(model, category: category, tabSelection: $tabSelection)
     }
 }

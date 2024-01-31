@@ -9,17 +9,20 @@ import SwiftUI
 
 struct MainView: View {
     @EnvironmentObject private var model: Model
+    @State private var tabSelection = 1
 
     var body: some View {
-        TabView {
-            RecipeCategoriesView(model)
+        TabView(selection: $tabSelection) {
+            RecipeCategoriesView(model, tabSelection: $tabSelection)
                 .tabItem {
                     Label("Recipes", systemImage: "book")
                 }
+                .tag(1)
             ShoppingCartView(model)
                 .tabItem {
                     Label("Shopping Cart", systemImage: "cart")
                 }
+                .tag(2)
         }
     }
 }
