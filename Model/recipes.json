@@ -1629,5 +1629,172 @@
             "They are rolled in flour, beaten eggs and finally in bread crumbs.",
             "Arrange the croquettes in a baking dish, drizzle with olive oil and bake in a preheated oven at 200 degrees with a fan until golden - 10-12 minutes."
         ]
+    },
+    {
+        "title": "Bulgarian Beans",
+        "author": "Nati",
+        "category": "Vegetarian",
+        "time": "120",
+        "servings": "4",
+        "imageName": "bulgarian-beans",
+        "image": "",
+        "ingredients": [
+            {
+                "content": "Beans",
+                "measurement": "cups",
+                "value": 2
+            },
+            {
+                "content": "Onions",
+                "measurement": "pcs",
+                "value": 1
+            },
+            {
+                "content": "RedPepperPowder",
+                "measurement": "tbsp",
+                "value": 1
+            },
+            {
+                "content": "Flour",
+                "measurement": "tbsp",
+                "value": 2
+            },
+            {
+                "content": "Oil",
+                "measurement": "ml",
+                "value": 20
+            },
+            {
+                "content": "DriedMint",
+                "measurement": "tsp",
+                "value": 1
+            },
+            {
+                "content": "Salt",
+                "measurement": "mg",
+                "value": 1
+            }
+        ],
+        "steps": [
+            "One full bowl (white type) of beans is washed and left in cool water to overnight in a closed pot.",
+            "The next day the water is changed and left to boil. After boiling, change the water again.",
+            "When the beans are cooked, remove from the heat. In its place, put a pan with hot fat.",
+            "Place the chopped onion inside and fry. Then add the spoonfuls of flour and pepper and mix with the liquid from the beans.",
+            "Integrate the mixture into the beans, add the dried mint (djodjen) and salt to taste and finish cooking."
+        ]
+    },
+    {
+        "title": "Cheese spaetzle",
+        "author": "Kris",
+        "category": "Vegetarian",
+        "time": "45",
+        "servings": "4",
+        "imageName": "kaesespaetzle",
+        "image": "",
+        "ingredients": [
+            {
+                "content": "Spaetzle",
+                "measurement": "kg",
+                "value": 1
+            },
+            {
+                "content": "CookingCream",
+                "measurement": "ml",
+                "value": 400
+            },
+            {
+                "content": "Onions",
+                "measurement": "pcs",
+                "value": 1
+            },
+            {
+                "content": "Parsley",
+                "measurement": "sl",
+                "value": 4
+            },
+            {
+                "content": "Еmmentaler",
+                "measurement": "gr",
+                "value": 200
+            },
+            {
+                "content": "RoastedOnions",
+                "measurement": "tbsp",
+                "value": 4
+            },
+            {
+                "content": "Salt",
+                "measurement": "mg",
+                "value": 1
+            },
+            {
+                "content": "Pepper",
+                "measurement": "mg",
+                "value": 1
+            }
+        ],
+        "steps": [
+            "Fry the diced onion in a little butter until translucent. Deglaze with the cooking cream, add the chopped parsley and season with salt and pepper. Bring to the boil briefly, then add half the cheese and stir well. Fold in the spaetzle.",
+            "Sprinkle the mixture with the remaining cheese and cook briefly. Serve with sprinkled roasted onions."
+        ]
+    },
+    {
+        "title": "Zucchini roll",
+        "author": "Sashko",
+        "category": "Vegetarian",
+        "time": "60",
+        "servings": "6",
+        "imageName": "zucchini-roll",
+        "image": "",
+        "ingredients": [
+            {
+                "content": "Zucchini",
+                "measurement": "pcs",
+                "value": 2
+            },
+            {
+                "content": "Eggs",
+                "measurement": "pcs",
+                "value": 2
+            },
+            {
+                "content": "CreamCheese",
+                "measurement": "pcs",
+                "value": 4
+            },
+            {
+                "content": "Flour",
+                "measurement": "tbsp",
+                "value": 3
+            },
+            {
+                "content": "BakingPowder",
+                "measurement": "pcs",
+                "value": 1
+            },
+            {
+                "content": "Dill",
+                "measurement": "pcs",
+                "value": 1
+            },
+            {
+                "content": "Garlic",
+                "measurement": "sl",
+                "value": 3
+            },
+            {
+                "content": "Salt",
+                "measurement": "mg",
+                "value": 1
+            }
+        ],
+        "steps": [
+            "In a bowl, whisk 2 eggs, a packet of cream cheese, a few spoonfuls of flour and baking powder.",
+            "To this mixture you add 2 grated zucchini, and 2/3 of the dill.",
+            "Stir and spread mixture on a baking sheet.",
+            "Bake the blart for 20 minutes at about 200 degrees.",
+            "Prepare the filling for the roll by mixing cream cheese (2-3 packages), garlic and remaining dill in a bowl.",
+            "Once the blt has cooled, I spread the filling and roll it up carefully, then put it in the fridge to cool."
+        ]
     }
 ]
